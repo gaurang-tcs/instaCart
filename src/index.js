@@ -4,9 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  StyledEngineProvider,
+  ThemeProvider,
+  createTheme
+} from "@mui/material/styles";
+
+const theme = createTheme({
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: "#FFFFFF",
+      },
+    },
+ },
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

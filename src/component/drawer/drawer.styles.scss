@@ -1,0 +1,48 @@
+.drawer-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+
+    .details {
+        display: flex;
+        
+        .icon {
+            height: 1.5rem;
+            width: 1.5rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            
+        }
+
+        .name {
+            margin-top: 2.3rem;
+            margin-left: 1rem;
+        }
+
+        img{
+            height:1.5rem;
+            width: 1.5rem;
+            margin-top: 2rem;
+            margin-left:2rem;
+        }
+    }
+
+    .heading{
+        color: rgb(114, 118, 126);
+        font-size: 0.8rem;
+        margin: 2rem 2rem;
+        font-weight:600;
+        margin-bottom: 0rem;
+    }
+
+}
+
+.out-drawer {
+    .drawer-icon {
+        padding: 0.5rem 1rem;
+        height: 2rem;
+        width: 1.5rem;
+        z-index: 1;
+        margin-top: 1rem;
+    }
+}
