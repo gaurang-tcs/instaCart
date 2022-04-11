@@ -1,17 +1,56 @@
+.timing{
+    padding: 1rem 1.5rem;
+    font-size: 0.7rem;
+    //color:gray;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.free-trial{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height:auto;
+    margin:0 1rem;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 240, 189);
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    border-radius: 18px;
+    cursor: pointer;
+
+    .cancel{
+        font-size: 0.7rem;
+        margin-top: -1rem;
+    }
+    .express{
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        line-height: 15px;
+        background-color: rgb(255, 190, 29);
+        width: 9rem;
+        text-align: center;
+        padding: 0.4rem 0.2rem;
+        border-radius: 14px;
+    }
+}
+
 .drawer-details {
     display: flex;
     flex-direction: column;
-    margin-top: 12rem;
 
     .details {
         display: flex;
+        cursor: pointer;
         
         .icon {
             height: 1.5rem;
             width: 1.5rem;
             margin-top: 2rem;
             margin-left: 2rem;
-            
+
         }
 
         .name {

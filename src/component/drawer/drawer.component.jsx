@@ -35,6 +35,19 @@ const SideBar = () => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
 
+        <div className='timing'>
+            <p>Instacart Customer since April 2022</p>
+        </div>
+
+        <div className='free-trial'>
+            <h4>Start your free trial today!</h4>
+            <p className='cancel'>You can cancel at any time.</p>
+
+            <span className='express'>Try Express for free</span>
+        </div>
+
+        <Divider />
+
             <div className='drawer-details'>
                 <div className='details'>
                     <IoMdHome className='icon' />

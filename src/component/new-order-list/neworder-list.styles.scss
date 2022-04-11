@@ -1,0 +1,9 @@
+.new-order-list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+
+    .list{
+        display: flex;
+    }
+}

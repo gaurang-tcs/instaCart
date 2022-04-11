@@ -1,0 +1,29 @@
+.neighborhood-list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    width: 100%;
+
+    .header{
+        display: flex;
+        width: 90%;
+       // background-color: aqua;
+        justify-content: space-between;
+
+        .view-all{
+           font-size: 1rem;
+           font-weight: 600;
+           margin-top: 0.5rem;
+          // background-color: red;
+          cursor: pointer;
+        }
+    }
+
+    .local{
+        font-size: 0.8rem;
+        margin-top: -1rem;
+    }
+    .list{
+        display: flex;
+    }
+}

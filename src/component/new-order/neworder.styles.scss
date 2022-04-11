@@ -1,0 +1,23 @@
+.new-order{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    text-align: center;
+
+    img{
+        height:6rem;
+        width: 6rem;
+        border-radius: 50%;
+    }
+
+    .name{
+        padding-top:1rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+    .status{
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: green;
+    }
+}
