@@ -3,6 +3,7 @@ const NEW_ORDER_DATA = [
         id:1,
         icon:'https://www.instacart.com/image-server/100x/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png',
         name:'Sprouts Farmers Market',
+        
     },
     {
         id:2,

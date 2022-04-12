@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import './menulist.styles.scss';
 
-import MENU_DATA from '../data/menudata';
+import MENU_DATA from '../../data/menudata';
 
 import Carousel from 'react-elastic-carousel';
 

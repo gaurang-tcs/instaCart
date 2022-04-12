@@ -12,7 +12,7 @@ const App = () => {
         <SideBar />
         <Header />
       </div>
-    <HomePage />
+      <HomePage />
     </div>
 
   )

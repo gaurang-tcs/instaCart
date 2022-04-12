@@ -2,10 +2,14 @@
     display: flex;
     width: 100%;
     height: auto;
-    // background-color: skyblue;
-    margin-top: 1rem;
+    position: fixed;
+   // margin-top: 1rem;
+    margin-left: 3rem;
+    z-index: 2;
+    background-color: white;
 
     img {
+        margin-top: 1rem;
         padding: 0.8rem 1rem;
     }
 
@@ -13,6 +17,7 @@
         display: flex;
         position: relative;
         margin-left: 4rem;
+        margin-top: 1rem;
         //background-color: red;
         width: 75%;
 
@@ -41,6 +46,7 @@
     .location {
         display: flex;
         width: 10rem;
+        margin-top: 1rem;
 
         .icon {
             height: 1.5rem;
@@ -60,11 +66,12 @@
 
     .cart-icon {
         display: flex;
-        margin-left: 2rem;
+        margin-right: 1rem;
         background-color: #F6F7F8;
         border: 0;
         border-radius: 18px;
         padding: 0 0.5rem;
+        margin-top: 1rem;
 
         .icon {
             height: 1.2rem;

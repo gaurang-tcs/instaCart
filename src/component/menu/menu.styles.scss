@@ -1,11 +1,11 @@
 .menu{
     display: flex;
     flex-direction: column;
-   // justify-content: space-between;
     width: 7rem;
     height: 7rem;
     align-items: center;
     padding: 1rem 1rem;
+    cursor: pointer;
 
     img{
         height: 4.5rem;

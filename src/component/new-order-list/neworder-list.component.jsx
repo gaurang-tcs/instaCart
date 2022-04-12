@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import NewOrder from "../new-order/neworder.component";
 
 import Carousel from 'react-elastic-carousel';
-//import './carousel.styles.css';
 
-import NEW_ORDER_DATA from '../data/new-order-data';
+import NEW_ORDER_DATA from '../../data/new-order-data';
 import './neworder-list.styles.scss';
 
 const NewOrderList = () => {
