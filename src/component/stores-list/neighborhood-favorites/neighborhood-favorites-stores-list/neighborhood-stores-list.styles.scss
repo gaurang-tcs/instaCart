@@ -1,10 +1,9 @@
-.collection-preview{
+.neighborhood-storeslist{
     display: flex;
     flex-direction: column;
 
-    .collection-list{
+    .list{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        //padding: 2rem;
     }
 }

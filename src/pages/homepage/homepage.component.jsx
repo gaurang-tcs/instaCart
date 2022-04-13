@@ -6,7 +6,7 @@ import MenuList  from "../../component/menulist/menulist.component";
 import Offer from "../../component/offer/offer.component";
 import NeighborhoodList from "../../component/neighborhood-list/neighborhood-list.component";
 import NewOrderList from "../../component/new-order-list/neworder-list.component";
-import CollectionOverview from '../../component/collection-overview/collection-overview.component';
+import AllStoresOverview from '../../component/AllStores-overview/AllStores-overview.component';
 
 const HomePage = () => {
     return(
@@ -15,7 +15,7 @@ const HomePage = () => {
          <Offer />
          <NeighborhoodList />
          <NewOrderList />
-         <CollectionOverview />
+         <AllStoresOverview />
         </div>
     
     )
