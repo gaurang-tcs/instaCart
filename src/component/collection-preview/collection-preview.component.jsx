@@ -2,7 +2,7 @@ import React from "react";
 
 import './collection-preview.styles.scss';
 
-import CollectionItem from "../collection-item/collection-item.component";
+import CollectionStore from "../collection-store/collection-store.component";
 
 const CollectionPreview = ({ list }) => {
     const {title, stores} = list;
@@ -11,7 +11,7 @@ const CollectionPreview = ({ list }) => {
           <h2>{title}</h2>
             <div className="collection-list">
                 {
-                    stores.map((store) => (<CollectionItem key={store.id} store={store} />))
+                    stores.map((store) => (<CollectionStore key={store.id} store={store} />))
                 }
             </div>
 

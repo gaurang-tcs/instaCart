@@ -382,7 +382,7 @@ const MAIN_DATA = [
                 name: 'BevMo!',
                 items: 'Alcohol',
                 delivery: 'Delivery',
-                
+
 
             },
             {
@@ -445,7 +445,206 @@ const MAIN_DATA = [
                 prices: 'In-store prices'
             }
         ]
-    }
+    },
+
+    {
+        id: 9,
+        title: 'Natural and organic stores in San Francisco',
+        stores: [
+            {
+                id: 1,
+                icon: 'https://www.instacart.com/image-server/100x/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png',
+                name: 'Sprouts Farmers Market',
+                items: 'Organic Groceries Butcher Shop',
+                delivery: 'Delivery by 9:45pm',
+                pickup: 'Pickup available',
+                prices: 'In-store prices',
+                time: '7.5 mi away'
+            },
+            {
+                id: 2,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/31/f889f29f-5d02-4e96-92d2-19c05e886ff6.png',
+                name: 'Rainbow Grocery',
+                items: 'Vegetarian Specialty Co-op',
+                delivery: 'Delivery',
+                prices: 'In-store prices'
+            },
+            {
+                id: 3,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/225/c5f82bbe-aaa8-4ff1-9daa-d2433840309c.png',
+                name: 'Andronico Community Market',
+                items: 'Alcohol Organic Specialty',
+                delivery: 'Delivery by 9:35pm'
+            },
+            {
+                id: 4,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/413/5c5f532d-2896-4f92-a654-1dfd4eecef2e.png',
+                name: 'O Organics Market',
+                items: 'Alcohol Organic Specialty',
+                delivery: 'Delivery by 9:35pm'
+            },
+            {
+                id: 5,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/436/695aaa61-4dab-4965-a7e3-0c2f93e9b119.png',
+                name: 'New Leaf Community Market',
+                items: 'Organic Groceries Specialty',
+                pickup: 'Pickup available',
+                time: '7.5 mi away'
+
+            }
+        ]
+    },
+
+
+    {
+        id: 10,
+        title: 'Pickup options in San Francisco',
+        stores: [
+            {
+                id: 1,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/29/1fbf3168-c654-4f7d-864f-7a615a041346.jpg',
+                name: 'Bi-Rite Market',
+                items: 'Organic alcohol Prepared Meals',
+                delivery: 'Delivery',
+                pickup: 'Pickup available',
+                prices: 'In-store prices',
+                time: '2.6 mi away'
+            },
+            {
+                id: 2,
+                icon: 'https://www.instacart.com/image-server/100x/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png',
+                name: 'Sprouts Farmers Market',
+                items: 'Organic Groceries Butcher Shop',
+                delivery: 'Delivery by 9:45pm',
+                pickup: 'Pickup available',
+                prices: 'In-store prices',
+                time: '7.5 mi away'
+            },
+
+            {
+                id: 3,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/542/930560f2-a134-496c-a71b-99984d9bfa52.png',
+                name: 'Lucky Supermarkets',
+                items: 'Groceries Produce Organic',
+                delivery: 'Delivery',
+                pickup: 'Pickup available',
+                prices: 'In-store prices',
+                time: '2.6 mi away'
+            },
+            {
+                id: 4,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/436/695aaa61-4dab-4965-a7e3-0c2f93e9b119.png',
+                name: 'New Leaf Community Market',
+                items: 'Organic Groceries Specialty',
+                pickup: 'Pickup available',
+                time: '22.3 mi away'
+
+            },
+            {
+                id: 5,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/173/08431e59-4a11-4f2f-8e3b-6767e5f2f066.png',
+                name: 'CHEF STORE',
+                items: 'Wholesale Groceries',
+                delivery: 'Delivery',
+                pickup: 'Pickup available',
+                time: '22.3 mi away'
+            },
+            {
+                id: 6,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/611/e41762fd-41c5-4f79-a202-4ea8df5020ab.png',
+                name: 'FOODMaxx',
+                items: 'Groceries Produce',
+                delivery: 'Delivery by 9:50pm',
+                pickup: 'Pickup available',
+                prices: 'In-store prices',
+                time: '22.3 mi away'
+            },
+            {
+                id: 7,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/281/f2ebe73b-4fba-4a02-a2c8-057384f65b0e.png',
+                name: 'Genes Fine Foods',
+                pickup: 'Pickup available',
+                time: '22.3 mi away'
+            },
+            {
+                id: 8,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/566/b735368c-fc09-4576-baf2-9f6332c966f9.png',
+                name: 'Glen Ellen Village Market',
+                pickup: 'Pickup available',
+                time: '22.3 mi away'
+            }
+        ]
+    },
+
+    {
+        id: 11,
+        title: 'Drugstores in San Francisco',
+        stores: [
+            {
+                id: 1,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/118/c7780a16-90f9-4596-b82b-af4121fe1ca0.png',
+                name: 'CVS Pharmacy',
+                items: 'Personal Care Drugstore Groceries',
+                delivery: 'Delivery by 9:55pm',
+                prices: 'In-store prices'
+            },
+            {
+                id: 2,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/1573/e04c8eaf-a180-4753-b651-8c4a1c81845c.png',
+                name: 'Walgreens',
+                items: 'Health and Wellness Drugstore Convience',
+                delivery: 'Delivery by 9:55pm',
+                prices: 'In-store prices'
+            }
+        ]
+    },
+
+    {
+        id: 12,
+        title: 'Pet supplies in San Francisco',
+        stores: [
+            {
+                id: 1,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/90/e989cfbe-8f4c-4ee2-be6a-b2416407a00a.png',
+                name: 'Petco',
+                items: 'Pet Supplies',
+                delivery: 'Delivery',
+                prices: 'In-store prices'
+            },
+            {
+                id: 2,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/208/c82df44b-95e3-44a2-a097-ead3bce9fa0c.jpg',
+                name: 'Healthy Spot-Organic Pet Food & Supply',
+                items: 'Pet Supplies Dog Cat',
+                delivery: 'Delivery',
+            },
+            {
+                id: 3,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/1995/36b6d0f4-d05c-4504-9ba7-7ce8df6110a4.jpeg',
+                name: 'Mishka Dog Boutique',
+                delivery: 'Delivery',
+            }
+        ]
+    },
+
+    {
+        id: 13,
+        title: 'More stores in San Francisco',
+        stores: [
+            {
+                id: 1,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/1723/e922ba93-75af-4acb-a8ab-ab030a2c87f7.jpeg',
+                name: 'The Container Store',
+                delivery: 'Delivery'
+            },
+            {
+                id: 2,
+                icon: 'https://www.instacart.com/image-server/72x/www.instacart.com/assets/domains/warehouse/logo/1980/3228493f-8d31-4b57-ae88-6d6fc7d65ee5.png',
+                name: 'Marina Floral Design',
+                delivery: 'Delivery'
+            }
+        ]
+    },
 ];
 
 export default MAIN_DATA;

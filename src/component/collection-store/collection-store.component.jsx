@@ -1,11 +1,11 @@
 import React from "react";
 
-import './collection-item.styles.scss';
+import './collection-store.styles.scss';
 
-const CollectionItem = ({ store }) => {
+const CollectionStore = ({ store }) => {
     const { icon, name, items, delivery, pickup, prices, time } = store;
     return (
-        <div className="collection-item">
+        <div className="collection-store">
             <img src={`${icon}`} alt='icon' />
             <div className="details">
                 <span className="name">{name}</span>
@@ -19,4 +19,4 @@ const CollectionItem = ({ store }) => {
     )
 }
 
-export default CollectionItem;
+export default CollectionStore;
