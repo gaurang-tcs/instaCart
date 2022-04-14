@@ -1,0 +1,69 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+
+    img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    
+    .add-button{
+        width:4.5rem;
+        height: 2.5rem;
+        border-radius: 20px;
+        position: absolute;
+        margin-left: 4.7rem;
+        margin-top: 0.5rem;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .add-to-button{
+        width:7rem;
+        height: 2.5rem;
+        border-radius: 20px;
+        position: absolute;
+        margin-left: 4rem;
+        margin-top: 0.5rem;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+    
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+
+    .price {
+        font-size: 1rem;
+        font-weight: 600;
+        padding:0.2rem 0;
+    }
+
+    .type {
+        color: rgb(43, 120, 198);
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding:0.2rem 0;
+    }
+
+    .name {
+        color: rgb(52, 53, 56);
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+
+    .weight {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgb(114, 118, 126);
+    }
+
+}

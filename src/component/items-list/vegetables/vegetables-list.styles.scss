@@ -1,0 +1,11 @@
+.vegetableslist{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    width: 95%;
+    overflow-X: scroll;
+
+    .list{
+        display: flex;
+    }
+}
