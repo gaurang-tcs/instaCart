@@ -4,7 +4,7 @@ import './newon-instacart-list.styles.scss';
 
 import NEW_ON_INSTACART_DATA from "../newon-instacart-data";
 
-import NewOnInstacart from '../newon-instacart/newon-instacart.component';
+import Store from '../../../store/store.component';
 
 const NewOnInstacartList = () => {
     const [stores] = useState(NEW_ON_INSTACART_DATA);
@@ -13,7 +13,7 @@ const NewOnInstacartList = () => {
          <h2>New on Instacart in San Francisco</h2>
             <div className="list">
             {
-                stores.map((stores) => (<NewOnInstacart key={stores.id} stores={stores} />))
+                stores.map((stores) => (<Store key={stores.id} stores={stores} />))
             }
             </div>
         </div>

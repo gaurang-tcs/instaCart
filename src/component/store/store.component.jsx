@@ -1,11 +1,11 @@
 import React from "react";
 
-import './wine-stores.styles.scss';
+import './store.styles.scss';
 
-const WineStores = ({ stores }) => {
+const Store = ({ stores }) => {
     const { icon, name, items, delivery, pickup, prices, time } = stores;
     return (
-        <div className="wine-stores">
+        <div className="store">
             <img src={`${icon}`} alt='icon' />
             <div className="details">
                 <span className="name">{name}</span>
@@ -19,4 +19,4 @@ const WineStores = ({ stores }) => {
     )
 };
 
-export default WineStores;
+export default Store;

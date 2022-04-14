@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import './organic-stores-list.styles.scss';
 
-import OrganicStores from '../organic-stores/organic-stores.component';
+import Store from '../../../store/store.component';
 
 import ORGANIC_STORES_DATA from '../organic-data';
 
@@ -13,7 +13,7 @@ const OrganicStoresList = () => {
          <h2>Natural and Organic stores in San Francisco</h2>
             <div className="list">
             {
-                stores.map((stores) => (<OrganicStores key={stores.id} stores={stores} />))
+                stores.map((stores) => (<Store key={stores.id} stores={stores} />))
             }
             </div>
         </div>

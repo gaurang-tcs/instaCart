@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import './retail-stores-list.styles.scss';
 
-import RetailStore from '../retail-stores/retail-stores.component';
+import Store from '../../../store/store.component';
 
 import RETAIL_STORE_DATA from '../retail.data';
 
@@ -13,7 +13,7 @@ const RetailStoresList = () => {
          <h2>Retail stores in San Francisco</h2>
             <div className="list">
             {
-                stores.map((stores) => (<RetailStore key={stores.id} stores={stores} />))
+                stores.map((stores) => (<Store key={stores.id} stores={stores} />))
             }
             </div>
         </div>
