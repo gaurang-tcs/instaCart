@@ -2,7 +2,7 @@ import React from 'react';
 import './header.styles.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import { IoLocationSharp } from 'react-icons/io5';
-import { FaShoppingCart } from 'react-icons/fa';
+import CartDrawer from '../cartdrawer/cartdrawer.component';
 
 const Header = () => {
     return (
@@ -26,10 +26,8 @@ const Header = () => {
                 <span className='count'>94105</span>
             </div>
 
-            <div className='cart-icon' >
-                <FaShoppingCart className='icon' />
-                <span className='count'>0</span>
-            </div>
+            <CartDrawer/>
+
         </div>
     )
 };

@@ -31,8 +31,8 @@ const SideBar = () => {
         <Box
             sx={{ width: 275 }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
+            // onClick={toggleDrawer(anchor, false)}
+            // onKeyDown={toggleDrawer(anchor, false)}
         >
 
         <div className='timing'>
