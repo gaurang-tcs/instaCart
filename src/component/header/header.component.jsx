@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './header.styles.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import { IoLocationSharp } from 'react-icons/io5';
 import CartDrawer from '../cartdrawer/cartdrawer.component';
+import {LocationContext} from '../../providers/location/location.provider';
 
 const Header = () => {
+    const{ toggleHidden } = useContext(LocationContext);
     return (
         <div className='header'>
             <img src='https://www.instacart.com/image-server/120x24/www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color@3x-6b71df83cfba8c6827f59bff009df3be6e96d484ebdc5da7e6122e9555eae9b6.png' alt='app-name' />
@@ -21,12 +23,12 @@ const Header = () => {
 
             </div>
 
-            <div className='location' >
+            <div className='location' onClick={toggleHidden} >
                 <IoLocationSharp className='icon' />
                 <span className='count'>94105</span>
             </div>
 
-            <CartDrawer/>
+            <CartDrawer />
 
         </div>
     )

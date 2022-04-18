@@ -10,7 +10,7 @@ const CheckoutButton = () => {
     return (
         <div className='checkout-total'>
             <span className='checkout'>Checkout</span>
-            <span className='total'>${cartTotal}</span>
+            <span className='total'>${cartTotal.toFixed(2)}</span>
         </div>
     )
 };

@@ -21,6 +21,7 @@
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
+       
     }
 
     .add-to-cart-button{
@@ -34,6 +35,7 @@
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
+        z-index:1
     
     }
 
@@ -49,17 +51,23 @@
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
+        display: flex;
 
         .delete{
-            width:1.4rem;
-            height:1.4rem;
-            margin-right: 1.9rem;
+            width:1.5rem;
+            height:2rem;
+    
+        }
+        .quantity{
+            width: 2rem;
+            height: 1rem;
+            margin-top: 0.5rem;
         }
         .add{
-            width:1.2rem;
-            height:1.3rem;
-        }
+            width:1.4rem;
+            height:2rem;
     }
+}
 
     .hidden{
         visibility: hidden;

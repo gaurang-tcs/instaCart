@@ -7,3 +7,9 @@ a{
   color: black;
 }
 
+.location-box{
+  position: absolute;
+  z-index: 1;
+  
+
+}

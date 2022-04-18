@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import CartProvider from './providers/cart/cart.provider';
+import LocationProvider from './providers/location/location.provider';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -24,15 +25,17 @@ const theme = createTheme({
 
 ReactDOM.render(
   <CartProvider>
-    <React.StrictMode>
-      <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </ThemeProvider>
-      </StyledEngineProvider>
-    </React.StrictMode>
+    <LocationProvider>
+      <React.StrictMode>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
+        </StyledEngineProvider>
+      </React.StrictMode>
+    </LocationProvider>
   </CartProvider>,
   document.getElementById('root')
 );

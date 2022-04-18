@@ -5,8 +5,9 @@
     height:50rem;
     //background-color: yellow;
     margin-top: 5rem;
-    overflow: scroll;
-    
+    overflow-y: auto;
+    scrollbar-width: none;
+
     .side-header{
         display: flex;
         flex-direction: column;
@@ -118,4 +119,12 @@
         }
     }
 
+}
+
+.sidemenu::-webkit-scrollbar{
+    width: 2px;
+}
+
+.sidemenu::-webkit-scrollbar-thumb{
+    background-color: rgb(241, 237, 237);
 }

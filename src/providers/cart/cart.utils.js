@@ -42,3 +42,23 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
         accumalatedQuantity + cartItem.quantity * cartItem.cartprice,
       0
     )
+
+    export const filterItemFromCart = (cartItems, item) => cartItems.filter(
+      cartItem => cartItem.id !== item.id
+    );
+
+    export const CountItem = (Item,ItemToAdd) => {
+      const existingItem = Item.find(
+        Item => Item.id === ItemToAdd.id
+      );
+    
+      if (existingItem) {
+        return Item.map(Item =>
+          Item.id === ItemToAdd.id
+            ? { ...Item, quantity: Item.quantity + 1 }
+            : Item
+        );
+      }
+    
+      return [...Item, { ...ItemToAdd, quantity: 1 }];
+    };

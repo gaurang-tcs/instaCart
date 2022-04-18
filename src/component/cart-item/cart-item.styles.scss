@@ -1,45 +1,104 @@
 .cartitem {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  height: 5rem;
+  padding: 1rem 1rem;
+ 
+  img {
+    width: 3.5rem;
+    height: 3.5rem
+  }
+
+  .item-details {
+    width: 25rem;
     display: flex;
-    height: 5rem;
-    padding: 1rem 1rem;
-   // margin: 1rem 1rem;
-    //margin-bottom: 15px;
-  
-    img {
-      width: 3.5rem;
-      height:3.5rem
+ 
+   .general-details{
+     display: flex;
+     flex-direction: column;
+
+    .name {
+      font-size: 0.8rem;
+      color: gray;
+      margin-left: 0.7rem;
+      width: 15rem;
+      margin-right: 2rem;
     }
-  
-    .item-details {
-      width: 25rem;
+    .weight{
+      color: gray;
+      font-size: 0.7rem;
+      margin-left: 0.7rem;
+      margin-top: 0.2rem;
+    }
+
+    .preference-remove{
       display: flex;
-     // flex-direction: column;
-      //align-items: flex-start;
-      justify-content: space-between;
-     // padding: 10px 20px;
-  
-      .name {
-        font-size: 0.8rem;
-        color: gray;
-        margin-left: 0.7rem;
+      padding: 0.5rem 0.5rem;
+      width: 15rem;
+      cursor: pointer;
+
+      .preference{
+        width: 100%;
+        height: 2rem;
+
+      .icon{
+        color: green;
+        width: 25%;
+        
       }
-
-      .quantity-price{
-        display: flex;
-        justify-content: space-between;
-       // background-color: red;
-        width:10rem;
-
-        .quantity{
-          text-align: center;
-          height: 1rem;
-          width: 1.5rem;
-          padding: 0.5rem 0.5rem;
-          border: 1px solid lightgray;
-          
+        .text{
+          font-size: 0.8rem;
+          width: 1rem;
+          margin-left: 0.5rem;
+    
         }
       }
     }
+   }
+
+    .quantity-price {
+      display: flex;
+      justify-content: space-between;
+      width: 15rem;
+
+      .quantity {
+        text-align: center;
+        height: 1rem;
+        width: 1.5rem;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid lightgray;
+        margin-left: 1.5rem;
+
+      }
+
+      .quantity-button {
+        text-align: center;
+        height: 1rem;
+        width: 4rem;
+        padding: 0.5rem 0.5rem;
+        border: 1px solid lightgray;
+        position: absolute;
+        background-color: white;
+        display: flex;
+
+
+        .button{
+          padding: 0.5rem 0.5rem;
+          margin-top: -0.5rem;
+        }
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .cartprice {
+        margin-top: 0.5rem;
+        width: 3rem;
+        height: 1.5rem;
+        position: fixed;
+        margin-left: 5.5rem;
+      }
+    }
   }
-  
+}
