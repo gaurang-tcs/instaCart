@@ -16,7 +16,7 @@ const Item = ({ item }) => {
     })
 
     const quantity = addedItem ? addedItem.quantity : 0;
-    console.log(quantity)
+    
     const handleMouseEnter = () => {
         setIsHovering(true)
     }
@@ -29,7 +29,7 @@ const Item = ({ item }) => {
         setIsShow(true);
         addItem(item);
     }
-
+    
     return (
         <div className="item">
             <img src={`${icon}`} alt='icon' />
