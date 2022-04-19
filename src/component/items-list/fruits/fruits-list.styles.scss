@@ -1,11 +1,11 @@
-.vegetableslist{
+.fruitslist{
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem;
     width: 95%;
     overflow-X: scroll;
 
-    .vl-header{
+    .fl-header{
         display: flex;
         justify-content: space-between;
 
@@ -45,7 +45,6 @@
 
     .list{
         display: flex;
-       // margin-right: 5rem;
     }
 }
 

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import './vegetables-list.styles.scss';
+import './fruits-list.styles.scss';
 
-import VEGETABLE_DATA from './vegetable-data';
+import FRUIT_DATA from './fruits-data';
 import Item from "../../item/item.component";
 
 import ReactPaginate from "react-paginate";
 
-const VegetablesList = () => {
-    const [items] = useState(VEGETABLE_DATA);
+const FruitsList = () => {
+    const [items] = useState(FRUIT_DATA);
     const [pageNumber, setPageNumber] = useState(0);
 
     const itemsPerPage = 8
@@ -24,9 +24,9 @@ const VegetablesList = () => {
     }
 
     return (
-        <div className="vegetableslist">
-            <div className="vl-header">
-                <h2>Fresh Vegetables</h2>
+        <div className="fruitslist">
+            <div className="fl-header">
+                <h2>Fresh Fruits</h2>
                 <ReactPaginate
                     previousLabel={'<'}
                     nextLabel={'>'}
@@ -49,4 +49,4 @@ const VegetablesList = () => {
     )
 };
 
-export default VegetablesList;
+export default FruitsList;

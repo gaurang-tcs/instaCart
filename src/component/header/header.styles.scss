@@ -3,7 +3,6 @@
     width: 100%;
     height: auto;
     position: fixed;
-   // margin-top: 1rem;
     margin-left: 3rem;
     z-index: 2;
     background-color: white;
@@ -19,16 +18,14 @@
         position: relative;
         margin-left: 4rem;
         margin-top: 1rem;
-        //background-color: red;
         width: 75%;
 
         .input-search {
             width: 100%;
             color: #343538;
             background-color: #F6F7F8;
-            box-shadow: 0 2px 4px 0 #0000000d;
             padding: 0 1.6rem;
-            border: 0;
+            border: none;
             border-radius: 8px;
             font-weight: 600;
 

@@ -3,11 +3,10 @@
     flex-direction: column;
     width: 15rem;
     height:50rem;
-    //background-color: yellow;
     margin-top: 5rem;
+    position: fixed;
     overflow-y: auto;
-    scrollbar-width: none;
-
+  
     .side-header{
         display: flex;
         flex-direction: column;
@@ -107,6 +106,7 @@
         margin-top: 27rem;
         z-index: -1;
         cursor: pointer;
+        overflow-y: auto;
       
 
         .footer-details{
@@ -121,10 +121,10 @@
 
 }
 
-.sidemenu::-webkit-scrollbar{
+.side-footer::-webkit-scrollbar{
     width: 2px;
 }
 
-.sidemenu::-webkit-scrollbar-thumb{
+.side-footer::-webkit-scrollbar-thumb{
     background-color: rgb(241, 237, 237);
 }
