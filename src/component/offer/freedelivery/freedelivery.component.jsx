@@ -6,7 +6,7 @@ const FreeDelivery = () => {
     return (
         <div className="free-delivery">
             <div className="delivery-details">
-                <h3>Get free delivery and a year of Grubhub+ with Express </h3>
+                <div className="name">Get free delivery and a year of Grubhub+ with Express </div>
                 <div className="footer">
                     <span className="here">Here's how</span>
                     <span className="terms">Terms apply</span>

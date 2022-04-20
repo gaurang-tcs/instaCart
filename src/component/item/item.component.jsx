@@ -31,7 +31,7 @@ const Item = ({ item }) => {
     }
     
     return (
-        <div className="item">
+        <div className="item" >
             <img src={`${icon}`} alt='icon' />
 
             <button className={`${isHovering ? "add-to-cart-button" : "hidden"}`} onClick={handleClick}>+ Add to cart</button>

@@ -36,11 +36,11 @@ const CartDrawer = () => {
                 //onClick={toggleDrawer(anchor, false)}
                 onKeyDown={toggleDrawer(anchor, false)}
             >
-                <div className='close-button'  onClick={toggleDrawer(anchor, false)}>
-                    <AiOutlineClose className='close-icon' />
-                    <button className='close'>Close</button>
+                <div className='my-4 mx-96 cursor-pointer'  onClick={toggleDrawer(anchor, false)}>
+                    <AiOutlineClose className='absolute mt-[0.9rem] h-[1.2rem] w-[1.3rem] ml-2 text-green-700' />
+                    <button className='py-3 px-6 text-base text-green-700 ml-[0.2rem] rounded-md border-green-700 border-[1px]'>Close</button>
                 </div>
-                <div className='cartlist'>
+                <div className='flex-col align-middle'>
                     <CartItemList />
                     <CheckoutButton />
                 </div>
@@ -53,9 +53,9 @@ const CartDrawer = () => {
             {['right'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <div className='out-drawer'>
-                        <div className='cart-icon' onClick={toggleDrawer(anchor, true)}>
-                            <FaShoppingCart className='icon' />
-                            <span className='count'>{CartItemsCount}</span>
+                        <div className='flex bg-[#F6F7F8] border-none rounded-[18px] p-2 mt-3 mr-20' onClick={toggleDrawer(anchor, true)}>
+                            <FaShoppingCart className='h-5 w-5 mt-2 ml-2' />
+                            <div className='text-slate-900 text-[0.9rem] mt-[0.4rem] ml-2 py-[0.1rem] px-2'>{CartItemsCount}</div>
                         </div>
                     </div>
                     <Drawer

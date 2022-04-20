@@ -10,65 +10,71 @@ import { IoIosBookmarks } from 'react-icons/io';
 
 const SideMenu = () => {
     return (
-        <div className="sidemenu">
-            <div className="side-header">
-                <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='icon' />
+        <div className="flex-col w-60 h-[100%] mt-20 fixed overflow-y-auto side-menu">
 
-                <h4>Sprouts Farmers Market</h4>
+        <div className="flex bg-white">
+            <div className="flex-col items-center mt-4 cursor-pointer border-b-gray-400 pb-4 fixed ml-6 z-10 bg-white">
+                <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='icon'
+                    className="h-[5.5rem] w-[5.5rem] ml-10" />
 
-                <div className="everyday">
-                    <span className="prices">Everyday store prices</span>
-                    <div className='arrow'>&#10095;</div>
+                <p className="font-semibold -ml-1">Sprouts Farmers Market</p>
+
+                <div className="flex">
+                    <span className="text-xs text-gray-500 my-1 ml-4 mt-[0.4rem]">Everyday store prices</span>
+                    <div className='text-gray-500 py-[0.2rem] px-[0.3rem]'>&#10095;</div>
                 </div>
-                <div className="satisfaction">
-                    <img src='https://i.postimg.cc/3RyHRysf/correct-2.jpg' alt="icon" />
-                    <span className="gurantee">100% satisfaction gurantee</span>
-                    <div className='arrow'>&#10095;</div>
+                <div className="flex -ml-4 -mt-1">
+                    <img src='https://i.postimg.cc/3RyHRysf/correct-2.jpg' alt="icon"
+                        className="h-3 w-3 m-[0.1rem] mt-[0.3rem]" />
+                    <span className="text-sm text-sky-500 mt-[0.1rem]">100% satisfaction gurantee</span>
+                    <div className='text-gray-500 ml-1 mr'>&#10095;</div>
                 </div>
+
             </div>
 
-            <div className='side-center'>
-                <div className='center-details'>
-                    <AiFillShop className='icon' />
-                    <span className="detail-name">Shop</span>
+            <div className='flex-col p-4 ml-2 border-b-gray-400 mt-44 z-10 bg-white w-44 cursor-pointer fixed pt-8 '>
+                <div className='flex py-2 px-[0.1rem]'>
+                    <AiFillShop className='h-6 w-6' />
+                    <span className="ml-4 text-slate-800 font-semibold">Shop</span>
                 </div>
 
-                <div className='center-details'>
-                    <AiTwotoneTag className='icon' />
-                    <span className="detail-name">Deals</span>
+                <div className='flex py-2 px-[0.1rem]'>
+                    <AiTwotoneTag className='h-6 w-6' />
+                    <span className="ml-4 text-slate-800 font-semibold">Deals</span>
                 </div>
 
-                <div className='center-details'>
-                    <GiAnticlockwiseRotation className='icon' />
-                    <span className="detail-name">Buy it again</span>
+                <div className='flex py-2 px-[0.1rem]'>
+                    <GiAnticlockwiseRotation className='h-6 w-6' />
+                    <span className="ml-4 text-slate-800 font-semibold">Buy it again</span>
                 </div>
 
-                <div className='center-details'>
-                    <MdFavorite className='icon' />
-                    <span className="detail-name">Favorites</span>
+                <div className='flex py-2 px-[0.1rem]'>
+                    <MdFavorite className='h-6 w-6' />
+                    <span className="ml-4 text-slate-800 font-semibold">Favorites</span>
                 </div>
 
-                <div className='center-details'>
-                    <IoIosBookmarks className='icon' />
-                    <span className="detail-name">Recipes</span>
+                <div className='flex py-2 px-[0.1rem]'>
+                    <IoIosBookmarks className='h-6 w-6' />
+                    <span className="ml-4 text-slate-800 font-semibold">Recipes</span>
                 </div>
             </div>
+            </div>
 
-            <div className="side-footer">
-                <div className="footer-details">
-                    <span className="footer-list">Produce</span>
-                    <span className="footer-list">Dairy & Eggs</span>
-                    <span className="footer-list">Baverages</span>
-                    <span className="footer-list">Meat & Seafood</span>
-                    <span className="footer-list">Snacks & Candy</span>
-                    <span className="footer-list">Frozen</span>
-                    <span className="footer-list">Bakery</span>
-                    <span className="footer-list">Dry Goods & Pasta</span>
-                    <span className="footer-list">Condiments & Sauces</span>
-                    <span className="footer-list">Canned Goods & Soups</span>
-                    <span className="footer-list">Breakfast</span>
-                    <span className="footer-list">Household</span>
-                    <span className="footer-list">Baking Essentials</span>
+            <div className="flex-col p-4 ml-2 mt-[25rem] -z-10 cursor-pointer overflow-y-auto scroll">
+                <div className="flex-col">
+                    <p className="py-4">Produce</p>
+                    <p className="py-4">Dairy & Eggs</p>
+                    <p className="py-4">Baverages</p>
+                    <p className="py-4">Meat & Seafood</p>
+                    <p className="py-4">Snacks & Candy</p>
+                    <p className="py-4">Frozen</p>
+                    <p className="py-4">Bakery</p>
+                    <p className="py-4">Dry Goods & Pasta</p>
+                    <p className="py-4">Condiments & Sauces</p>
+                    <p className="py-4">Canned Goods & Soups</p>
+                    <p className="py-4">Breakfast</p>
+                    <p className="py-4">Household</p>
+                    <p className="py-4">Baking Essentials</p>
                 </div>
 
             </div>

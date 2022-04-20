@@ -14,14 +14,10 @@ import DrugStoresList from '../stores-list/drug/drug-stores-list/drug-stores-lis
 import PetStoresList from '../stores-list/pet-supplies/pet-stores-list/pet-stores-list.component';
 import MoreStoresList from '../stores-list/more/more-stores-list/more-stores-list.component'; 
 
-import './AllStores-overview.styles.scss';
-
-
-
 const AllStoresOverview = () => {
   
     return(
-        <div className="allstores-overview">
+        <div className="flex-col w-full ml-16">
             <BigSelectionStoreList />
             <NewOnInstacartList />
             <BulkStoresList />

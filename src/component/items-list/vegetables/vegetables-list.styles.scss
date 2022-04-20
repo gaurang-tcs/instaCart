@@ -1,14 +1,5 @@
 .vegetableslist{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 2rem;
-    width: 95%;
-    overflow-X: scroll;
-
     .vl-header{
-        display: flex;
-        justify-content: space-between;
-
         .paginationbuttons{
             padding: 1rem 1rem;
             width:5rem;
@@ -40,12 +31,9 @@
        .page{
            visibility: hidden;
        }
+        }
+
 
     }
 
-    .list{
-        display: flex;
-       // margin-right: 5rem;
-    }
-}
 

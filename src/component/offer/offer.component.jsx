@@ -5,7 +5,6 @@ import Refer from './refer/refer.component';
 
 import Carousel from 'react-elastic-carousel';
 
-import './offer.styles.scss';
 import './carousel2.styles.css';
 
 const Offer = () => {
@@ -16,7 +15,7 @@ const Offer = () => {
 
     return (
 
-        <div className="offer">
+        <div className="flex">
             <Carousel breakPoints={breakPoints} >
                 <FreeDelivery />
                 <Refer />

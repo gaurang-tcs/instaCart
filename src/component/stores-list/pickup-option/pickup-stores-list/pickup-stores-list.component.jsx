@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import './pickup-stores-list.styles.scss';
-
 import Store from '../../../store/store.component';
 
 import PICKUP_STORES_DATA from '../pickup-data';
@@ -9,9 +6,9 @@ import PICKUP_STORES_DATA from '../pickup-data';
 const PickupStoresList = () => {
     const [stores] = useState(PICKUP_STORES_DATA);
     return (
-        <div className="pickup-storeslist">
-         <h2>Pickup options in San Francisco</h2>
-            <div className="list">
+        <div className="flex-col">
+         <div className="decoration-slate-800 font-semibold text-2xl">Pickup options in San Francisco</div>
+            <div className="grid grid-cols-3 mt-4">
             {
                 stores.map((stores) => (<Store key={stores.id} stores={stores} />))
             }

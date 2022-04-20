@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-
-import './menulist.styles.scss';
-
 import MENU_DATA from '../../data/menudata';
+import Menu from "../menu/menu.component";
 
 import Carousel from 'react-elastic-carousel';
-
-import Menu from "../menu/menu.component";
 
 import './carousel.styles.css';
 
@@ -18,7 +14,7 @@ const MenuList = () => {
       ];
 
     return (
-        <div className="menu-list">
+        <div className="flex mt-16">
             <Carousel breakPoints={breakPoints} >
             {
                 menu.map((menu) => (<Menu key={menu.id} menu={menu} />))

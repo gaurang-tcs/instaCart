@@ -1,14 +1,5 @@
-.fruitslist{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 2rem;
-    width: 95%;
-    overflow-X: scroll;
-
-    .fl-header{
-        display: flex;
-        justify-content: space-between;
-
+.vegetableslist{
+    .vl-header{
         .paginationbuttons{
             padding: 1rem 1rem;
             width:5rem;
@@ -40,11 +31,9 @@
        .page{
            visibility: hidden;
        }
+        }
+
 
     }
 
-    .list{
-        display: flex;
-    }
-}
 

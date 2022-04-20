@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import './pet-stores-list.styles.scss';
-
 import Store from '../../../store/store.component';
 
 import PET_STORE_DATA from '../pet-stores-data';
@@ -9,9 +7,9 @@ import PET_STORE_DATA from '../pet-stores-data';
 const PetStoresList = () => {
     const [stores] = useState(PET_STORE_DATA);
     return (
-        <div className="pet-storeslist">
-         <h2>Pet supplies in San Francisco</h2>
-            <div className="list">
+        <div className="flex-col">
+        <div className="decoration-slate-800 font-semibold text-2xl">Pet supplies in San Francisco</div>
+            <div className="grid grid-cols-3 mt-4">
             {
                 stores.map((stores) => (<Store key={stores.id} stores={stores} />))
             }
