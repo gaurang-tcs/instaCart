@@ -11,9 +11,6 @@ import { CartContext } from '../../providers/cart/cart.provider';
 import { FaShoppingCart } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import './cartdrawer.styles.scss';
-
-
 const CartDrawer = () => {
     const { CartItemsCount } = useContext(CartContext);
     const [state, setState] = React.useState({
@@ -41,7 +38,7 @@ const CartDrawer = () => {
                     <button className='py-3 px-6 text-base text-green-700 ml-[0.2rem] rounded-md border-green-700 border-[1px]'>Close</button>
                 </div>
                 <div className='flex-col align-middle'>
-                    <CartItemList />
+                    <CartItemList toggleDrawer={toggleDrawer(anchor, false)}/>
                     <CheckoutButton />
                 </div>
             </Box>
@@ -54,7 +51,7 @@ const CartDrawer = () => {
                 <React.Fragment key={anchor}>
                     <div className='out-drawer'>
                         <div className='flex bg-[#F6F7F8] border-none rounded-[18px] p-2 mt-3 mr-20' onClick={toggleDrawer(anchor, true)}>
-                            <FaShoppingCart className='h-5 w-5 mt-2 ml-2' />
+                            <FaShoppingCart className='h-5 w-5 mt-2'/>
                             <div className='text-slate-900 text-[0.9rem] mt-[0.4rem] ml-2 py-[0.1rem] px-2'>{CartItemsCount}</div>
                         </div>
                     </div>

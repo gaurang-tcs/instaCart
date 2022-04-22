@@ -4,7 +4,6 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
 import SideBar from './component/drawer/drawer.component';
-import Header from './component/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
 import StoreFrontPage from './pages/store-frontpage/store-frontpage.component';
 import Location from './component/location/location.component';
@@ -19,7 +18,6 @@ const App = () => {
 
       <div className="drawer-header">
         <SideBar />
-        <Header />
       </div>
       <Switch>
         <Route exact path='/' component={HomePage} />
