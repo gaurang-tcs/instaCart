@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { CartContext } from "../../providers/cart/cart.provider";
 import { MdDelete } from 'react-icons/md';
 import { GrAdd } from 'react-icons/gr';
-
 import './item.styles.scss'
 
 const Item = ({ item }) => {
@@ -11,12 +10,20 @@ const Item = ({ item }) => {
     const [isShow, setIsShow] = useState(false);
     const { addItem, removeItem, cartItems } = useContext(CartContext);
 
+    //const [isLoading, setIsLoading] = useState(true);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 2000)
+    // }, [])
+
     const addedItem = cartItems.find(obj => {
         return obj.id === item.id
     })
 
     const quantity = addedItem ? addedItem.quantity : 0;
-    
+
     const handleMouseEnter = () => {
         setIsHovering(true)
     }
@@ -29,30 +36,30 @@ const Item = ({ item }) => {
         setIsShow(true);
         addItem(item);
     }
-    
+
     return (
-        <div className="item" >
-            <img src={`${icon}`} alt='icon' />
+        
+            <div className="item" >
+                <img src={`${icon}`} alt='icon' />
 
-            <button className={`${isHovering ? "add-to-cart-button" : "hidden"}`} onClick={handleClick}>+ Add to cart</button>
+                <button className={`${isHovering ? "add-to-cart-button" : "hidden"}`} onClick={handleClick}>+ Add to cart</button>
 
-            {quantity === 0 ?
-                (<button className="add-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseRemove}>+ Add</button>)
-                :
-                (<button className={`${isShow ? "main-button" : "hidden"}`}>
-                    <MdDelete className="delete" onClick={() => removeItem(item)} />
-                    <div className="quantity">{quantity}</div>
-                    <GrAdd className="add" onClick={() => addItem(item)} />
-                </button>
-                )}
-            <div className="item-details">
-                <span className="price">{priceview}</span>
-                <span className="type">{type}</span>
-                <span className="name">{name}</span>
-                <span className="weight">{weight}</span>
+                {quantity === 0 ?
+                    (<button className="add-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseRemove}>+ Add</button>)
+                    :
+                    (<button className={`${isShow ? "main-button" : "hidden"}`}>
+                        <MdDelete className="delete" onClick={() => removeItem(item)} />
+                        <div className="quantity">{quantity}</div>
+                        <GrAdd className="add" onClick={() => addItem(item)} />
+                    </button>
+                    )}
+                <div className="item-details">
+                    <span className="price">{priceview}</span>
+                    <span className="type">{type}</span>
+                    <span className="name">{name}</span>
+                    <span className="weight">{weight}</span>
+                </div>
             </div>
-        </div>
-
     )
 }
 

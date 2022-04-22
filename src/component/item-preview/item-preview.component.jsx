@@ -1,42 +1,58 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import Item from "../item/item.component";
+import './item-preview.styles.scss';
 
-import FruitsList from "../items-list/fruits/fruits-list.component";
-import VegetablesList from '../items-list/vegetables/vegetables-list.component';
+import { BiChevronRight } from 'react-icons/bi'
+import ReactPaginate from "react-paginate";
 
-//import SearchIcon from '@mui/icons-material/Search';
+const ItemPreview = ({ list }) => {
+    const { title, items } = list;
 
-//import VEGETABLE_DATA from "../items-list/vegetables/vegetable-data";
+    const [pageNumber, setPageNumber] = useState(0);
 
-const ItemPreview = () => {
-    //const [filters, setFilters] = useState({});
-    //const [items] = useState(VEGETABLE_DATA);
+    const itemsPerPage = 8
+    const pagesVisited = pageNumber * itemsPerPage
 
-    // const filteredItems = items.filter(item =>
-    //     item.name.toLowerCase().includes(filters.toLowerCase())
-     
-    //    )
+    const displayItems = items
+        .slice(pagesVisited, pagesVisited + itemsPerPage)
+        .map((item) => (<Item key={item.id} item={item} />));
 
-    // const filterData = (data) => {
-    //     const filteredData = [];
-
-    //     if(!filters.name) {
-    //         return data;
-    //     }
-
-    //     for (const item of data) {
-    //         if (filters.name !== '' && item.name !== filters.name) {
-    //             continue
-    //         }
-    //         filteredData.push(item);
-    //     }
-    //     return filteredData;
-    // }
+    const pageCount = Math.ceil(items.length / itemsPerPage)
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    }
 
     return (
-        <div className="flex-col w-[86%] mt-24 ml-64 overflow-y-auto"> 
-            <VegetablesList />
-            <FruitsList />
-        </div>
+            <div className="flex-col w-[95%] h-[25rem] p-8 vegetableslist">
+                <div className="flex justify-between vl-header">
+                    <div className="font-bold text-2xl mt-4">{title}</div>
+
+                    <div className="flex more-pagination">
+                        <div className="mt-4 h-8 flex text-green-600 cursor-pointer viewmore">
+                            <div className="mr-[0.1rem] mt-[0.6rem] view">View more</div>
+                            <BiChevronRight className="mt-2 h-6 w-6" />
+                        </div>
+
+                        <ReactPaginate
+                            previousLabel={'<'}
+                            nextLabel={'>'}
+                            pageCount={pageCount}
+                            onPageChange={changePage}
+                            containerClassName={'paginationbuttons'}
+                            previousLinkClassName={'nextbutton'}
+                            nextLinkClassName={'nextbutton'}
+                            disabledClassName={'paginationDisabled'}
+                            activeClassName={'paginationActive'}
+                            pageClassName={'page'}
+
+                        />
+                    </div>
+                </div>
+
+                <div className='flex'>
+                    {displayItems}
+                </div>
+            </div>
     )
 };
 
