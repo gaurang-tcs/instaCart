@@ -1,0 +1,37 @@
+.skeleton {
+    padding: 0.3rem 1rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.skeleton-wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 3.3rem;
+}
+
+.skeleton .thumbnail {
+    width: 10rem;
+    height: 9rem;
+    background: #D2DBE2;
+    border-radius: 7px;
+}
+
+.skeleton .text-lg {
+    width:10rem;
+    background-color: #D2DBE2;
+    border-radius: 7px;
+    height: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.skeleton .text-md {
+    width: 50%;
+    background-color: #D2DBE2;
+    border-radius: 7px;
+    height: 1rem;
+}
+
+
+

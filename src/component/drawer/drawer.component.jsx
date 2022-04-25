@@ -121,7 +121,7 @@ const SideBar = () => {
             {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <div className='out-drawer'>
-                        <FiMenu className='h-8 w-6 ml-2 mt-6 z-10 fixed cursor-pointer' onClick={toggleDrawer(anchor, true)} />
+                        <FiMenu className='h-8 w-6 ml-2  mt-[1.4rem] fixed cursor-pointer' onClick={toggleDrawer(anchor, true)} />
                     </div>
 
                     <Drawer

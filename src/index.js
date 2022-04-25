@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import CartProvider from './providers/cart/cart.provider';
+import ItemProvider from './providers/Item/items.provider';
 import LocationProvider from './providers/location/location.provider';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +14,7 @@ import {
   ThemeProvider,
   createTheme
 } from "@mui/material/styles";
+
 
 const theme = createTheme({
   overrides: {
@@ -24,19 +27,21 @@ const theme = createTheme({
 });
 
 ReactDOM.render(
-  <CartProvider>
-    <LocationProvider>
-      <React.StrictMode>
-        <StyledEngineProvider injectFirst>
-          <ThemeProvider theme={theme}>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>
-          </ThemeProvider>
-        </StyledEngineProvider>
-      </React.StrictMode>
-    </LocationProvider>
-  </CartProvider>,
+  <ItemProvider>
+    <CartProvider>
+      <LocationProvider>
+        <React.StrictMode>
+          <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </ThemeProvider>
+          </StyledEngineProvider>
+        </React.StrictMode>
+      </LocationProvider>
+    </CartProvider>
+  </ItemProvider>,
   document.getElementById('root')
 );
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import './sidemenu.styles.scss';
 
@@ -7,8 +7,10 @@ import { AiTwotoneTag } from 'react-icons/ai';
 import { GiAnticlockwiseRotation } from 'react-icons/gi';
 import { MdFavorite } from 'react-icons/md';
 import { IoIosBookmarks } from 'react-icons/io';
+import { ItemContext } from "../../providers/Item/items.provider";
 
 const SideMenu = () => {
+    const {filterItem, AllItem} = useContext(ItemContext);
     return (
         <div className="flex-col w-60 h-[100%] mt-20 fixed overflow-y-auto side-menu">
 
@@ -35,7 +37,7 @@ const SideMenu = () => {
             <div className='flex-col p-4 ml-2 border-b-gray-400 mt-44 z-10 bg-white w-44 cursor-pointer fixed pt-8 '>
                 <div className='flex py-2 px-[0.1rem]'>
                     <AiFillShop className='h-6 w-6' />
-                    <span className="ml-4 text-slate-800 font-semibold">Shop</span>
+                    <span className="ml-4 text-slate-800 font-semibold" onClick={AllItem}>Shop</span>
                 </div>
 
                 <div className='flex py-2 px-[0.1rem]'>
@@ -62,19 +64,15 @@ const SideMenu = () => {
 
             <div className="flex-col p-4 ml-2 mt-[25rem] -z-10 cursor-pointer overflow-y-auto scroll">
                 <div className="flex-col">
-                    <p className="py-4">Produce</p>
-                    <p className="py-4">Dairy & Eggs</p>
-                    <p className="py-4">Baverages</p>
-                    <p className="py-4">Meat & Seafood</p>
-                    <p className="py-4">Snacks & Candy</p>
-                    <p className="py-4">Frozen</p>
-                    <p className="py-4">Bakery</p>
-                    <p className="py-4">Dry Goods & Pasta</p>
-                    <p className="py-4">Condiments & Sauces</p>
-                    <p className="py-4">Canned Goods & Soups</p>
-                    <p className="py-4">Breakfast</p>
-                    <p className="py-4">Household</p>
-                    <p className="py-4">Baking Essentials</p>
+                    <p className="py-4" onClick={() => filterItem('Produce')}>Produce</p>
+                    <p className="py-4" onClick={() => filterItem('Dairy')}>Dairy & Eggs</p>
+                    <p className="py-4" onClick={() => filterItem('Baverages')}>Baverages</p>
+                    <p className="py-4" onClick={() => filterItem('Meat')}>Meat & Seafood</p>
+                    <p className="py-4" onClick={() => filterItem('Snacks')}>Snacks & Candy</p>
+                    <p className="py-4" onClick={() => filterItem('Frozens')}>Frozen</p>
+                    <p className="py-4" onClick={() => filterItem('Bakery')}>Bakery</p>
+                    <p className="py-4" onClick={() => filterItem('Dry Goods')}>Dry Goods & Pasta</p>
+                    <p className="py-4" onClick={() => filterItem('Sauces')}>Condiments & Sauces</p>
                 </div>
 
             </div>

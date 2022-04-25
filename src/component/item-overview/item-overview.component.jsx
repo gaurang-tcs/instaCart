@@ -1,8 +1,11 @@
-import React from "react";
+import React,{ useContext } from "react";
 import ItemPreview from "../item-preview/item-preview.component";
+import { ItemContext } from "../../providers/Item/items.provider";
 
-const ItemOverview = ({lists}) => {
-   
+const ItemOverview = () => {
+
+    const { lists } = useContext(ItemContext)
+
     return (
         <div className="flex-col w-[86%] mt-16 ml-64">
             {

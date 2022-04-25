@@ -3,8 +3,9 @@ import './App.css';
 
 import { Route, Switch } from 'react-router-dom';
 
-import SideBar from './component/drawer/drawer.component';
+
 import HomePage from './pages/homepage/homepage.component';
+import SkeletonProduct from './component/skeleton/skeletonProduct';
 import StoreFrontPage from './pages/store-frontpage/store-frontpage.component';
 import Location from './component/location/location.component';
 import { LocationContext } from './providers/location/location.provider';
@@ -18,13 +19,10 @@ const App = () => {
       <div className='location-box'>
         { hidden ? null : <Location />}
       </div>
-
-      <div className="drawer-header">
-        <SideBar />
-      </div>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/storefront' component={StoreFrontPage} />
+        <Route path='/skeleton' component={SkeletonProduct} />
       </Switch>
     </div>
 
