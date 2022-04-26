@@ -1,17 +1,23 @@
 import React, { createContext, useState } from "react";
 
 export const LocationContext = createContext({
-    hidden:true,
-    toggleHidden: () => {},
+    lochidden: true,
+    togglelocHidden: () => {}
+    
 });
 
 const LocationProvider = ({ children }) => {
-    const[hidden, setHidden] = useState(true);
 
-    const toggleHidden = () => setHidden(!hidden);
+    const [lochidden, setlocHidden] = useState(true);
+    
+    const togglelocHidden = () => { setlocHidden(!lochidden); };
 
-    return(
-        <LocationContext.Provider value = { {toggleHidden, hidden} }>
+    return (
+        <LocationContext.Provider
+            value={{
+                togglelocHidden,
+                lochidden
+            }}>
             {children}
         </LocationContext.Provider>
     )

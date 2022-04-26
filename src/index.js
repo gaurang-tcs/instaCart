@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+
 import CartProvider from './providers/cart/cart.provider';
 import ItemProvider from './providers/Item/items.provider';
 import LocationProvider from './providers/location/location.provider';
+import LogInProvider from './providers/login/login.provider';
+import SignUpProvider from './providers/signup/signup.provider';
 
 import './index.css';
 import App from './App';
@@ -14,6 +17,7 @@ import {
   ThemeProvider,
   createTheme
 } from "@mui/material/styles";
+
 
 
 const theme = createTheme({
@@ -30,15 +34,19 @@ ReactDOM.render(
   <ItemProvider>
     <CartProvider>
       <LocationProvider>
-        <React.StrictMode>
-          <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={theme}>
-              <BrowserRouter>
-                <App />
-              </BrowserRouter>
-            </ThemeProvider>
-          </StyledEngineProvider>
-        </React.StrictMode>
+        <LogInProvider>
+          <SignUpProvider>
+            <React.StrictMode>
+              <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={theme}>
+                  <BrowserRouter>
+                    <App />
+                  </BrowserRouter>
+                </ThemeProvider>
+              </StyledEngineProvider>
+            </React.StrictMode>
+          </SignUpProvider>
+        </LogInProvider>
       </LocationProvider>
     </CartProvider>
   </ItemProvider>,

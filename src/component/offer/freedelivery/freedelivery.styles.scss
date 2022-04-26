@@ -6,11 +6,13 @@
     justify-content: center;
     margin-top: 2rem;
     cursor: pointer;
+    z-index: -10;
 
 
     .delivery-details{
         z-index:1;
         margin-right: 28rem;
+       
         
         .name{
             font-weight: 700;

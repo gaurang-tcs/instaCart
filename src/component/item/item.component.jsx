@@ -16,7 +16,7 @@ const Item = ({ item }) => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 10000)
+        }, 3000)
     }, [])
 
     const addedItem = cartItems.find(obj => {

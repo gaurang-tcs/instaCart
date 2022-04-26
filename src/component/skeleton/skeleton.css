@@ -33,5 +33,30 @@
     height: 1rem;
 }
 
+.skeleton-store{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.skeleton .icon {
+    width: 5rem;
+    height: 5rem;
+    background: #D2DBE2;
+    border-radius: 50%;
+}
+
+.skeleton .store-details {
+    margin: auto 0;
+    margin-left: 1rem;
+    vertical-align: middle;
+    background-color: #D2DBE2;
+    border-radius: 7px;
+    width: 7rem;
+    height: 7rem;
+}
+
+
+
 
 
