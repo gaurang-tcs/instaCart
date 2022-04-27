@@ -110,8 +110,8 @@ const Item = ({ item }) => {
                                     </div>
                                 </div>
                                 <div>
-                                <a href={`${item.icon}`}>
-                                    <AiOutlineSearch size={25} className="mt-4 cursor-pointer" />
+                                    <a href={`${item.icon}`}>
+                                        <AiOutlineSearch size={25} className="mt-4 cursor-pointer" />
                                     </a>
                                 </div>
 
