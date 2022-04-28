@@ -6,19 +6,21 @@ import { CartContext } from "../../providers/cart/cart.provider";
 
 import { MdDelete } from 'react-icons/md';
 import { GrAdd } from 'react-icons/gr';
+import { IoAdd } from 'react-icons/io5';
+import { IoRemoveOutline } from 'react-icons/io5'
 import { MdClose } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import SkeletonProduct from '../skeleton/skeletonProduct';
-import QuantityDropdown from "./quantity-dropdown/quantity-dropdown";
+
 
 import './item.styles.scss'
 
 
 const Item = ({ item }) => {
 
-    const { icon, priceview, type, name, weight } = item;
-    const [selected, setSelected] = useState('');
+    const { icon, priceview, type, name, weight, details } = item;
+    //const [selected, setSelected] = useState('');
     const [isHovering, setIsHovering] = useState(false);
     const [isShow, setIsShow] = useState(false);
     const { addItem, removeItem, cartItems } = useContext(CartContext);
@@ -39,6 +41,7 @@ const Item = ({ item }) => {
     })
 
     const quantity = addedItem ? addedItem.quantity : 0;
+
 
     const handleMouseEnter = () => {
         setIsHovering(true)
@@ -69,7 +72,7 @@ const Item = ({ item }) => {
             modal ? (
                 <div className="modal">
                     <div onClick={toggleModal} className="overlay">
-                        <MdClose size={25} className='text-white ml-[100rem] mt-8' onClick={toggleModal} />
+                        <MdClose size={25} className='text-white ml-[100rem] mt-8 cursor-pointer' onClick={toggleModal} />
                     </div>
                     <div className="modal-content">
                         <div className="item-modal">
@@ -79,7 +82,6 @@ const Item = ({ item }) => {
                                     alt: 'Wristwatch by Ted Baker London',
                                     isFluidWidth: true,
                                     src: `${item.icon}`
-
                                 },
 
                                 largeImage: {
@@ -96,8 +98,22 @@ const Item = ({ item }) => {
                                 <p className="i-m-price">{item.priceview}</p>
 
                                 <div className="drop-button">
-                                    <QuantityDropdown selected={selected} setSelected={setSelected} />
-                                    <button className="button">Add to cart</button>
+
+                                    {
+                                        quantity > 0 ? (
+                                            <div className="flex">
+                                                <p className="quantity-box">{quantity}</p>
+                                                <div className="border-2 border-green w-14 h-12 mt-2 ml-4 bg-green-600 cursor-pointer rounded-[20px]" onClick={() => removeItem(item)}>
+                                                    <IoRemoveOutline size={30} className="p-1 ml-[0.6rem] mt-[0.5rem] text-white font-bold" />
+                                                </div>
+                                                <div className="border-2 border-green w-14 h-12 mt-2 ml-4 bg-green-600 cursor-pointer rounded-[20px]" onClick={() => addItem(item)}>
+                                                    <IoAdd size={30} className="p-1 ml-[0.6rem] mt-[0.5rem] text-slate-100 font-bold " />
+                                                </div>
+                                            </div>
+                                        )
+                                            :
+                                            (<button className="button" onClick={() => addItem(item)}>Add to cart</button>)}
+
                                 </div>
 
                                 <div className="satisfaction">
@@ -110,14 +126,16 @@ const Item = ({ item }) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href={`${item.icon}`}>
+                                    <a href={`${item.icon}`} target='_blank'>
                                         <AiOutlineSearch size={25} className="mt-4 cursor-pointer" />
                                     </a>
                                 </div>
-
                             </div>
+                        </div>
 
-
+                        <div className="details">
+                            <p className="d-head">Details</p>
+                            <p className="d-detail">{item.details}</p>
                         </div>
                     </div>
                 </div>

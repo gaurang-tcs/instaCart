@@ -28,7 +28,7 @@ const LogIn = () => {
 
     return (<div>
        
-        { !isLoading ? (<div className="bg-[rgba(0,0,0,0.5)] w-[119rem] h-[55rem] justify-center items-center fixed z-20">
+        { !isLoading ? (<div className="bg-[rgba(0,0,0,0.5)] w-[119rem] h-[55rem] justify-center items-center fixed z-20 ">
         <div className="flex-col mt-24 ml-[49rem] h-[40rem] w-[30rem] bg-white z-20 border-black rounded-xl fixed">
             <GrFormClose size={30} className='ml-2 mt-3 cursor-pointer' onClick={toggleLogInHidden} />
             <p className="font-bold text-3xl ml-4 mt-4">LogIn</p>

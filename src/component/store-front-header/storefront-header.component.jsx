@@ -4,20 +4,20 @@ import SearchIcon from '@mui/icons-material/Search';
 import { IoLocationSharp } from 'react-icons/io5';
 import { MdDeliveryDining } from 'react-icons/md';
 import { GiCardPickup } from 'react-icons/gi'
-import { AiFillClockCircle } from 'react-icons/ai';
 
 import { LocationContext } from '../../providers/location/location.provider';
 import { LogInContext } from '../../providers/login/login.provider';
 
 import CartDrawer from '../cartdrawer/cartdrawer.component';
+import TimingModal from '../timing-modal/timing-modal.component';
 
 
 
 const StoreFrontHeader = () => {
 
     const { togglelocHidden } = useContext(LocationContext);
-    const { toggleLogInHidden }  = useContext(LogInContext);
-    
+    const { toggleLogInHidden } = useContext(LogInContext);
+
     return (
         <div className='fixed h-auto flex ml-12 w-full z-10 cursor-pointer bg-white'>
             <img src='https://www.instacart.com/image-server/120x24/www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color@3x-6b71df83cfba8c6827f59bff009df3be6e96d484ebdc5da7e6122e9555eae9b6.png' alt='app-name'
@@ -48,18 +48,15 @@ const StoreFrontHeader = () => {
                 </div>
             </div>
 
-            <div className='flex w-40 mt-4 ml-32' onClick={togglelocHidden} >
+            <div className='flex w-40 mt-4 ml-28' onClick={togglelocHidden} >
                 <IoLocationSharp className='h-6 w-6 mt-[0.6rem] ml-4' />
                 <span className='mt-[0.7rem] ml-4 decoration-slate-[#343538] text-[0.9rem] font-semibold'>94105</span>
             </div>
 
-            <div className='flex w-80 mt-4'>
-                <AiFillClockCircle className='h-6 w-6 mt-[0.6rem] ml-4' />
-                <p className='mt-[0.7rem] ml-4 decoration-slate-[#343538] text-[0.9rem] font-semibold'>Today, 8am - 10am</p>
-            </div>
+            <TimingModal />
 
             <div>
-                <button className='w-24 h-12 mr-4 rounded-3xl mt-3 font-medium' onClick={toggleLogInHidden}>
+                <button className='w-24 h-12 mr-8 rounded-3xl mt-3 font-medium' onClick={toggleLogInHidden}>
                     Log in
                 </button>
             </div>

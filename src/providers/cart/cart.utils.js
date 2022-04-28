@@ -14,6 +14,27 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
   };
 
+  // export const addItemToCartFromModal = (cartItems, cartItemToAdd, q) => {
+
+  //   console.log("Cart Items: ",cartItems);
+  //   console.log("Item: ",cartItemToAdd);
+  //   console.log("Quantity to Add: ",q);
+
+  //   const existingCartItem = cartItems.find(
+  //     cartItem => cartItem.id === cartItemToAdd.id
+  //   );
+  
+  //   if (existingCartItem) {
+  //     return cartItems.map(cartItem =>
+  //       cartItem.id === cartItemToAdd.id
+  //         ? { ...cartItem, quantity: cartItem.quantity + q }
+  //         : cartItem
+  //     );
+  //   }
+  
+  //   return [...cartItems, { ...cartItemToAdd, quantity: q }];
+  // };
+
   export const removeItemFromCart = (cartItems, cartItemToRemove) => {
     const existingCartItem = cartItems.find(
       cartItem => cartItem.id === cartItemToRemove.id

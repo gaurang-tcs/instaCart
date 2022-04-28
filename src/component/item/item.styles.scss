@@ -39,9 +39,12 @@ body.active-modal {
         width: 80rem;
         height: 50rem;
         z-index: 50;
+        display: flex;
+        flex-direction: column;
 
         .item-modal {
             display: flex;
+            margin-top: 2.5rem;
 
             .item-detail {
                 display: flex;
@@ -75,6 +78,17 @@ body.active-modal {
                     display: flex;
                     margin-top: 2rem;
 
+                    .quantity-box{
+                        padding: 1rem;
+                        padding-left: 1.5rem;
+                        border-radius: 20px;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        background-color: rgb(36, 162, 36);
+                        color: white;
+                        width: 4rem;
+                    }
+
                     .button{
                         background-color: rgb(36, 162, 36);
                         padding: 1rem;
@@ -84,7 +98,13 @@ body.active-modal {
                         color: white;
                         font-weight: 600;
                         font-size: 1.2rem;
-                        
+                        cursor: pointer;
+                    }
+
+
+
+                    .hidden{
+                        visibility: hidden;
                     }
                 }
 
@@ -106,6 +126,21 @@ body.active-modal {
             }
 
         }
+        .details{
+            margin-top: 5rem;
+            margin-left: 1rem;
+
+            .d-head{
+                color: rgb(52, 53, 56);
+                font-size: 1.3rem;
+            }
+
+            .d-detail{
+                margin-top: 0.5rem;
+                color: rgb(164, 158, 158);
+            }
+        }
+
     }
 
     .close-modal {

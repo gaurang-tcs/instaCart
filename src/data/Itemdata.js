@@ -9,6 +9,7 @@ const ITEM_DATA = [
                 icon: 'https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_117a7a2d-b040-4559-befb-c769728e5545.png',
                 priceview: '$2.99',
                 type: 'Organic',
+                details: 'Bako Sweet Organic Sweet Potato Steam in Bag',
                 name: 'Bako Sweet Organic Sweet Potato Steam in Bag',
                 weight: '14 oz',
                 cartprice: '2.99'
@@ -18,6 +19,7 @@ const ITEM_DATA = [
                 icon: 'https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_e2dd6bc6-09e0-4ac2-b298-ad6ac2e6d5d3.png',
                 priceview: '$0.99',
                 type: 'Organic',
+                details:'Organic Cilantro',
                 name: 'Organic Cilantro',
                 weight: '1 ct',
                 cartprice: '0.99'
