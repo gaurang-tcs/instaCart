@@ -1,6 +1,4 @@
-body.active-modal {
-    overflow-y: hidden;
-}
+
 
 .timing-modal {
     width: 100%;
@@ -32,15 +30,14 @@ body.active-modal {
         transform: translate(-50%, -50%);
         line-height: 1.4;
         background: #f1f1f1;
-        //padding: 14px 28px;
         border-radius: 3px;
         width: 45rem;
         height: auto;
         display: flex;
         flex-direction: column;
-       
 
-        .tab-header{
+
+        .tab-header {
             display: flex;
             margin-top: 15rem;
             width: 100%;
@@ -48,8 +45,8 @@ body.active-modal {
             padding: 1rem;
             font-size: 1.5rem;
             justify-content: center;
-            
-            .tab{
+
+            .tab {
                 padding: 0 1rem;
                 background: transparent;
                 cursor: pointer;
@@ -65,22 +62,22 @@ body.active-modal {
             }
         }
 
-        .info{
+        .info {
             display: flex;
             flex-direction: column;
-            
-            .info-header{
+
+            .info-header {
                 display: flex;
                 flex-direction: column;
                 margin-top: 1rem;
                 padding: 2.5rem 1rem;
                 border-bottom: 1px solid lightgray;
 
-                .everyday-price{
+                .everyday-price {
                     display: flex;
                     margin-top: 1rem;
 
-                    .prices{
+                    .prices {
                         display: flex;
                         flex-direction: column;
                         margin-left: 1.5rem;
@@ -88,7 +85,7 @@ body.active-modal {
                 }
             }
 
-            .middle{
+            .middle {
                 display: flex;
                 flex-direction: column;
                 padding: 2.5rem 1rem;
@@ -97,7 +94,7 @@ body.active-modal {
                 border-bottom: 1px solid lightgray;
             }
 
-            .about{
+            .about {
                 display: flex;
                 flex-direction: column;
                 padding: 2.5rem 1rem;
@@ -105,13 +102,14 @@ body.active-modal {
                 border-top: 1px solid lightgray;
                 border-bottom: 1px solid lightgray;
 
-                .readMoreClassName{
+                .readMoreClassName {
                     color: green;
                     margin-top: 5.6rem;
                     margin-left: 25.5rem;
                     position: absolute;
                 }
-                .readLessClassName{
+
+                .readLessClassName {
                     color: green;
                     margin-top: 8.5rem;
                     margin-left: 18.2rem;
@@ -119,7 +117,7 @@ body.active-modal {
                 }
             }
 
-            .footer{
+            .footer {
                 display: flex;
                 flex-direction: column;
                 padding: 2.5rem 1rem;
@@ -132,5 +130,61 @@ body.active-modal {
 
     }
 
+    .delivery-times {
+        width: 100%;
 
+        .d-header {
+            display: flex;
+            padding-left: 0.5rem;
+            margin-top: 1rem;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 1rem;
+        }
+
+        .d-middle {
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 3rem;
+        }
+
+        .d-footer {
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 3rem;
+        }
+    }
+
+    .pick-up-times{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .p-header{
+            display: flex;
+            padding-left: 0.5rem;
+            margin-top: 1rem;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 1rem;
+        }
+
+        .p-footer{
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 3rem;
+        }
+    }
 }
+
+

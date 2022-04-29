@@ -1,7 +1,5 @@
 import React from "react";
 
-import './homepage.styles.scss';
-
 import MenuList from "../../component/menulist/menulist.component";
 import Offer from "../../component/offer/offer.component";
 import NeighborhoodList from "../../component/neighborhood-list/neighborhood-list.component";

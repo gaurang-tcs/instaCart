@@ -19,7 +19,7 @@ import './item.styles.scss'
 
 const Item = ({ item }) => {
 
-    const { icon, priceview, type, name, weight, details } = item;
+    const { icon, priceview, type, name, weight } = item;
     //const [selected, setSelected] = useState('');
     const [isHovering, setIsHovering] = useState(false);
     const [isShow, setIsShow] = useState(false);
@@ -126,7 +126,7 @@ const Item = ({ item }) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href={`${item.icon}`} target='_blank'>
+                                    <a href={`${item.icon}`} rel="noreferrer noopener" target='_blank'>
                                         <AiOutlineSearch size={25} className="mt-4 cursor-pointer" />
                                     </a>
                                 </div>

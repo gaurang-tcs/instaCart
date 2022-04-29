@@ -8,6 +8,7 @@ import StoreFrontPage from './pages/store-frontpage/store-frontpage.component';
 import LogIn from './component/login/login.component';
 import Location from './component/location/location.component';
 import SignUp from './component/sign-up/signup.component';
+import CheckoutPage from './pages/checkoutpage/checkoutpage.component';
 
 import { LocationContext } from './providers/location/location.provider';
 import { LogInContext } from './providers/login/login.provider';
@@ -29,6 +30,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/storefront' component={StoreFrontPage} />
+        <Route path='/checkout' component={CheckoutPage} />
       </Switch>
     </div>
   )

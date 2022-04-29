@@ -11,6 +11,12 @@ const LogInProvider = ({ children }) => {
 
     const toggleLogInHidden = () => { setLogInHidden(!logInHidden); };
 
+    if (!logInHidden) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
     return (
         <LogInContext.Provider
             value={{

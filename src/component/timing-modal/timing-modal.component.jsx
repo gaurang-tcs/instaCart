@@ -30,10 +30,10 @@ const TimingModal = () => {
             {modal && (
                 <div className="timing-modal">
                     <div onClick={toggleModal} className="timing-overlay">
-                   
+
                     </div>
                     <div className="timing-modal-content">
-                    <MdClose size={25} className='text-white ml-[45rem] cursor-pointer' onClick={toggleModal} />
+                        <MdClose size={25} className='text-white ml-[45rem] cursor-pointer' onClick={toggleModal} />
 
                         <div className="tab-header">
                             <div className={index === 1 ? "active-tab" : "tab"} onClick={() => { setIndex(1) }} >
@@ -132,11 +132,111 @@ const TimingModal = () => {
                         </div>
 
                         <div className="ghhhg" hidden={index !== 2}>
-                            <p>avin</p>
+                            <div className="delivery-times">
+                                <div className="d-header">
+                                    <IoMdInformationCircleOutline size={25} />
+                                    <p className="text-gray-500 text-base ml-6">Minimum order amount $35</p>
+                                </div>
+
+                                <div className="d-middle">
+                                    <li className="text-gray-800 text-sm">Friday,April 29</li>
+                                    <div className="flex justify-between mt-6 text-gray-500 text-sm w-[95%]">
+                                        <li>Fast & flexible: Apr 28 - Apr-29</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                </div>
+
+                                <div className="d-footer">
+                                    <li className="text-gray-800 text-sm">Friday,April 29</li>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>8am - 10am</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>9am - 11am</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>10am - Noon</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>11am - 1pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>1pm - 3pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>2pm - 4pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>3pm- 5pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>4pm - 6pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>5pm - 7pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
+
                         <div className="ghhhg" hidden={index !== 3}>
-                            <p>yash</p>
+                            <div className="pick-up-times">
+
+                                <div className="p-header">
+                                    <IoMdInformationCircleOutline size={25} />
+                                    <p className="text-gray-500 text-base ml-6">Minimum order amount $35</p>
+                                </div>
+
+                                <div className="p-footer">
+                                    <li className="text-gray-800 text-sm">Friday,April 29</li>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>8am - 10am</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>9am - 11am</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>10am - Noon</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>11am - 1pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>1pm - 3pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>2pm - 4pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>3pm- 5pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>4pm - 6pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                    <div className="flex justify-between mt-8 text-gray-500 text-sm w-[95%]">
+                                        <li>5pm - 7pm</li>
+                                        <p>$3.99</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
