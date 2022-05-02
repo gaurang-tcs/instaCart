@@ -1,14 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { IoLocationSharp } from 'react-icons/io5';
+
+import Location from '../location/location.component';
 import CartDrawer from '../cartdrawer/cartdrawer.component';
-import { LocationContext } from '../../providers/location/location.provider';
-import { LogInContext } from '../../providers/login/login.provider';
+import LogIn from '../login/login.component';
+
 import './styles.css';
 
 const Header = () => {
-    const { togglelocHidden } = useContext(LocationContext);
-    const { toggleLogInHidden }  = useContext(LogInContext);
 
     //const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +28,7 @@ const Header = () => {
                 <input
                     type='search'
                     placeholder="Search products, stores, and recipes"
-                    className='w-full h-7 decoration-slate-700 bg-white py-6 border-hidden rounded-lg font-semibold '
+                    className='w-full h-7 decoration-slate-700 bg-[#F6F7F8] py-6 px-8 outline-none rounded-lg font-semibold '
                 />
                 <div className="absolute mt-2.5 left-[94%]">
                     <SearchIcon />
@@ -37,15 +36,12 @@ const Header = () => {
 
             </div>
 
-            <div className='flex w-40 mt-4' onClick={togglelocHidden} >
-                <IoLocationSharp className='h-6 w-6 mt-[0.6rem] ml-4' />
-                <span className='mt-[0.7rem] ml-4 decoration-slate-[#343538] text-[0.9rem] font-semibold'>94105</span>
+            <div>
+                <Location />
             </div>
 
             <div>
-                <button className='bg-green-600 w-24 h-12 rounded-3xl text-white mt-3 mr-4 font-semibold' onClick={toggleLogInHidden}>
-                    Log in
-                </button>
+                <LogIn />
             </div>
 
             <CartDrawer />

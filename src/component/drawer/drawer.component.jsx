@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useContext } from 'react';
+
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
@@ -13,12 +13,13 @@ import { AiFillGift, AiFillTag, AiFillBulb } from 'react-icons/ai';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { MdOutlineLogout } from 'react-icons/md';
 
-import { SignUpContext } from '../../providers/signup/signup.provider.jsx';
+import SignUp from '../sign-up/signup.component.jsx';
+
+
 
 
 const SideBar = () => {
 
-    const { toggleSignUpHidden } = useContext(SignUpContext);
 
     const [state, setState] = React.useState({
         left: false,
@@ -31,12 +32,6 @@ const SideBar = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    const handleSignUp = (anchor) => {
-        toggleDrawer(anchor, false)
-        toggleSignUpHidden()
-        
-    }
-
     const list = (anchor) => (
         <Box
             sx={{ width: 275 }}
@@ -45,9 +40,7 @@ const SideBar = () => {
         // onKeyDown={toggleDrawer(anchor, false)}
         >
 
-            <button className='bg-green-600 w-[90%] h-14 ml-4 rounded-xl text-white mt-5 mr-4 font-semibold' onClick={handleSignUp}>
-                Sign up
-            </button>
+            <SignUp />
             <div className='px-6 py-4 text-xs mr-12 mt-6 font-normal'>
                 <p>Instacart Customer since April 2022</p>
             </div>

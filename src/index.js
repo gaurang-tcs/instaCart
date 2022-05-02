@@ -4,9 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import CartProvider from './providers/cart/cart.provider';
 import ItemProvider from './providers/Item/items.provider';
-import LocationProvider from './providers/location/location.provider';
-import LogInProvider from './providers/login/login.provider';
-import SignUpProvider from './providers/signup/signup.provider';
 
 import './index.css';
 import App from './App';
@@ -33,21 +30,15 @@ const theme = createTheme({
 ReactDOM.render(
   <ItemProvider>
     <CartProvider>
-      <LocationProvider>
-        <LogInProvider>
-          <SignUpProvider>
-            <React.StrictMode>
-              <StyledEngineProvider injectFirst>
-                <ThemeProvider theme={theme}>
-                  <BrowserRouter>
-                    <App />
-                  </BrowserRouter>
-                </ThemeProvider>
-              </StyledEngineProvider>
-            </React.StrictMode>
-          </SignUpProvider>
-        </LogInProvider>
-      </LocationProvider>
+      <React.StrictMode>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
+        </StyledEngineProvider>
+      </React.StrictMode>
     </CartProvider>
   </ItemProvider>,
   document.getElementById('root')

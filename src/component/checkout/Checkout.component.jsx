@@ -7,17 +7,19 @@ import { FiTruck } from 'react-icons/fi'
 import { BsTelephone } from 'react-icons/bs'
 import { MdOutlinePayment } from 'react-icons/md';
 
-import { LogInContext } from "../../providers/login/login.provider";
-import { SignUpContext } from '../../providers/signup/signup.provider';
 import { CartContext } from '../../providers/cart/cart.provider';
 
+import LogIn from "../login/login.component";
+import SignUp from "../sign-up/signup.component";
 import CheckoutFormInput from "./checkout-forminput/checkout-forminput.component";
 
 const Checkout = () => {
 
-    const { toggleLogInHidden } = useContext(LogInContext);
-    const { toggleSignUpHidden } = useContext(SignUpContext);
-    const { cartTotal } = useContext(CartContext);
+
+    const { cartTotal, cartItems } = useContext(CartContext);
+    // console.log(cartItems);
+    const items = cartItems.map(object => { return object.icon })
+    console.log(items)
 
     const [index, setIndex] = useState(1);
 
@@ -121,9 +123,16 @@ const Checkout = () => {
                             <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
                             <p className="text-base text-gray-500 font-bold pl-4 mt-1">Share with Sprouts Farmer Market</p>
                         </div>
-                        <div className="flex py-6 pl-10 border-t-[1px] border-gray-300">
-                            <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
-                            <p className="text-base text-gray-500 font-bold pl-4 mt-1">2 items</p>
+                        <div className="flex-col py-6 pl-10 border-t-[1px] border-gray-300">
+                            <div className="flex">
+                                <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
+                                <p className="text-base text-gray-500 font-bold pl-4 mt-1">2 items</p>
+                            </div>
+                            <div className="flex ml-4">
+                                {items.map(item => (
+                                    <img key={item.id} src={`${item}`} width={40} height={20} alt='icon' />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,8 +152,8 @@ const Checkout = () => {
                             </div>
                             <p className="text-sm text-gray-400 mt-4">Please sign up or log in to Instacart to continue checking out and receive your order receipt via email.</p>
                             <div className="flex mt-4">
-                                <button className="w-[40%] h-14 text-white font-bold text-xl rounded-lg bg-green-500" onClick={toggleSignUpHidden}>Sign up</button>
-                                <button className="w-[40%] h-14 text-slate-800 font-medium text-xl rounded-lg bg-[#f7f7f7] ml-8" onClick={toggleLogInHidden}>Log in</button>
+                                <SignUp checksign />
+                                <LogIn checklog />
                             </div>
                         </div>
 
@@ -168,9 +177,16 @@ const Checkout = () => {
                                 <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
                                 <p className="text-base text-gray-500 font-bold pl-4 mt-1">Share with Sprouts Farmer Market</p>
                             </div>
-                            <div className="flex py-6 pl-10 border-t-[1px] border-gray-300">
-                                <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
-                                <p className="text-base text-gray-500 font-bold pl-4 mt-1">2 items</p>
+                            <div className="flex-col py-6 pl-10 border-t-[1px] border-gray-300">
+                                <div className="flex">
+                                    <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='store' className="h-6 w-6 mt-1" />
+                                    <p className="text-base text-gray-500 font-bold pl-4 mt-1">2 items</p>
+                                </div>
+                                <div className="flex ml-4">
+                                    {items.map(item => (
+                                        <img key={item.id} src={`${item}`} width={40} height={20} alt='icon' />
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -227,7 +243,7 @@ const Checkout = () => {
 
 
 
-            { index === 1 &&
+            {index === 1 &&
                 (<div className="ml-8 mt-8 bg-white w-[20rem] h-[40rem] flex-col">
 
                     <div className="flex mt-8 w-[80%] ml-8">

@@ -8,7 +8,7 @@ const CartItemList = ({toggleDrawer}) => {
     const { cartItems } = useContext(CartContext);
 
     return (
-        <div className="flex-col overflow-y-auto h-[45rem]">
+        <div className="flex-col overflow-y-auto h-[45rem] bg-white">
             {
                 cartItems.length ?
                     (cartItems.map(cartItem => (

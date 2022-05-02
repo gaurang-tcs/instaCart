@@ -33,7 +33,7 @@ body.active-modal {
         left: 50%;
         transform: translate(-50%, -50%);
         line-height: 1.4;
-        background: #f1f1f1;
+        background: white;
         padding: 14px 28px;
         border-radius: 3px;
         width: 80rem;
@@ -50,7 +50,7 @@ body.active-modal {
                 display: flex;
                 flex-direction: column;
                 margin-top: 2rem;
-                margin-left: 4rem;
+                margin-left: 10rem;
                 height: 15rem;
                 width: 50rem;
 
@@ -165,7 +165,6 @@ body.active-modal {
         height: 10rem;
     }
 
-
     .add-button {
         width: 4.5rem;
         height: 2.5rem;
@@ -211,11 +210,12 @@ body.active-modal {
         cursor: pointer;
         display: flex;
         background-color: white;
+        padding-left: 0.5rem;
+        padding-top: 0.2rem;
 
         .delete {
             width: 1.5rem;
             height: 2rem;
-
         }
 
         .quantity {

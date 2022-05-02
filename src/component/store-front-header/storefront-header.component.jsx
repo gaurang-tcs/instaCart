@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import SearchIcon from '@mui/icons-material/Search';
-import { IoLocationSharp } from 'react-icons/io5';
+
 import { MdDeliveryDining } from 'react-icons/md';
 import { GiCardPickup } from 'react-icons/gi'
 
-import { LocationContext } from '../../providers/location/location.provider';
-import { LogInContext } from '../../providers/login/login.provider';
-
+import LogIn from '../login/login.component';
 import CartDrawer from '../cartdrawer/cartdrawer.component';
 import TimingModal from '../timing-modal/timing-modal.component';
+import Location from '../location/location.component';
 
 
 
 const StoreFrontHeader = () => {
-
-    const { togglelocHidden } = useContext(LocationContext);
-    const { toggleLogInHidden } = useContext(LogInContext);
 
     return (
         <div className='fixed h-auto flex ml-12 w-full z-10 cursor-pointer bg-white'>
@@ -28,9 +24,9 @@ const StoreFrontHeader = () => {
                 <input
                     type='search'
                     placeholder="Search Sprouts Farmers Market..."
-                    className='w-full h-7 decoration-slate-700 bg-white py-6 border-hidden rounded-lg font-semibold '
+                    className='w-full h-7 decoration-slate-700 outline-none appearance-none bg-[#f6f7f8] px-4 py-6 rounded-lg font-semibold mr-8'
                 />
-                <div className="absolute mt-2.5 ml-[50rem]">
+                <div className="absolute mt-2.5 ml-[51rem]">
                     <SearchIcon />
                 </div>
 
@@ -48,17 +44,13 @@ const StoreFrontHeader = () => {
                 </div>
             </div>
 
-            <div className='flex w-40 mt-4 ml-28' onClick={togglelocHidden} >
-                <IoLocationSharp className='h-6 w-6 mt-[0.6rem] ml-4' />
-                <span className='mt-[0.7rem] ml-4 decoration-slate-[#343538] text-[0.9rem] font-semibold'>94105</span>
+            <div className='-mr-8'>
+                <Location />
             </div>
-
             <TimingModal />
 
             <div>
-                <button className='w-24 h-12 mr-8 rounded-3xl mt-3 font-medium' onClick={toggleLogInHidden}>
-                    Log in
-                </button>
+                <LogIn />
             </div>
 
             <CartDrawer />

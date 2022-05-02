@@ -137,6 +137,8 @@ const Item = ({ item }) => {
                             <p className="d-head">Details</p>
                             <p className="d-detail">{item.details}</p>
                         </div>
+
+                        <p className="text-neutral-400 mt-[46rem] font-normal text-xs fixed">*Product information or packaging displayed may not be current or complete. Always refer to the physical product for the most accurate information and warnings. For additional information, contact the retailer or manufacturer. *Actual weight may vary based on seasonality and other factors. Estimated price is approximate and provided only for reference.</p>
                     </div>
                 </div>
             )
