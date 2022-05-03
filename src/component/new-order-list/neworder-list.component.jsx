@@ -14,8 +14,8 @@ const NewOrderList = () => {
       ];
 
     return (
-        <div className='flex-col w-full'>
-            <div className='decoration-slate-800 font-semibold text-2xl ml-[3.7rem]'>Start a new order</div>
+        <div className='flex-col w-full mt-8'>
+            <div className='text-[#343538] font-bold text-2xl ml-20'>Start a new order</div>
                 <div className="mt-4">
                 <Carousel breakPoints={breakPoints} >
                     {

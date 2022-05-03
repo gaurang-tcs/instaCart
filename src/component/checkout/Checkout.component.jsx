@@ -17,9 +17,8 @@ const Checkout = () => {
 
 
     const { cartTotal, cartItems } = useContext(CartContext);
-    // console.log(cartItems);
+ 
     const items = cartItems.map(object => { return object.icon })
-    console.log(items)
 
     const [index, setIndex] = useState(1);
 

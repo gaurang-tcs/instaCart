@@ -14,7 +14,7 @@ const HomePage = () => {
                 <SideBar/>
                 <Header />
             </div>
-            <div className='flex-col w-[75%] h-auto mt-8 ml-52 -z-20'>
+            <div className='flex-col w-[72%] h-auto mt-8 ml-52 -z-20'>
                 <MenuList />
                 <Offer />
                 <NeighborhoodList />

@@ -5,7 +5,14 @@ const SkeletonStore = () => {
     return (
         <div className='skeleton-store'>
             <Skeleton type='icon' />
-            <Skeleton type='store-details' />
+            <div className='flex-col w-[10rem] ml-4'>
+                <Skeleton type='store-d1' />
+                <Skeleton type='store-d2' />
+                <Skeleton type='store-d3' />
+                <Skeleton type='store-d4' />
+                <Skeleton type='store-d5' />
+                <Skeleton type='store-d6' />
+            </div>
         </div>
     )
 };

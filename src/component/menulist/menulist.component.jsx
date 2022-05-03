@@ -10,11 +10,11 @@ const MenuList = () => {
     const [menu] = useState(MENU_DATA);
 
     const breakPoints = [
-        {width:1, itemsToShow:10}
+        {width:1, itemsToShow:14}
       ];
 
     return (
-        <div className="flex mt-16">
+        <div className="flex mt-24">
             <Carousel breakPoints={breakPoints} >
             {
                 menu.map((menu) => (<Menu key={menu.id} menu={menu} />))

@@ -17,7 +17,7 @@ const CartProvider = ({children}) => {
     const [cartItems,setCartItems] = useState([]);
     const [CartItemsCount, setCartItemsCount] = useState(0);
     const [cartTotal, setCartTotal] = useState(0);
-    // console.log(cartItems);
+   
     const addItem = item => setCartItems(addItemToCart(cartItems, item));
     //const addItemFromModal = (item,q) => setCartItems(addItemToCartFromModal(cartItems, item, q));
     const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));

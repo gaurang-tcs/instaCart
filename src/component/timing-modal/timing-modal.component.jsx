@@ -239,14 +239,11 @@ const TimingModal = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
             )}
 
-
-            <div className='flex w-48 mt-4' onClick={toggleModal}>
+            <div className='flex w-48 mt-4 mr-8' onClick={toggleModal}>
                 <AiFillClockCircle className='h-6 w-6 mt-[0.6rem] ml-4' />
                 <p className='mt-[0.7rem] ml-4 decoration-slate-[#343538] text-[0.9rem] font-semibold'>Today, 8am - 10am</p>
             </div>

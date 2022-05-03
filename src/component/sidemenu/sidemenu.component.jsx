@@ -10,6 +10,7 @@ import { IoIosBookmarks } from 'react-icons/io';
 import { ItemContext } from "../../providers/Item/items.provider";
 
 import SkeletonSideMenu from "../skeleton/skeleton-sidemenu";
+import GuranteeModal from "../gurantee-modal/gurantee-modal.component";
 
 const SideMenu = () => {
     const { filterItem, AllItem } = useContext(ItemContext);
@@ -37,12 +38,8 @@ const SideMenu = () => {
                             <span className="text-xs text-gray-500 my-1 ml-4 mt-[0.4rem]">Everyday store prices</span>
                             <div className='text-gray-500 py-[0.2rem] px-[0.3rem]'>&#10095;</div>
                         </div>
-                        <div className="flex -ml-4 -mt-1">
-                            <img src='https://i.postimg.cc/3RyHRysf/correct-2.jpg' alt="icon"
-                                className="h-3 w-3 m-[0.1rem] mt-[0.3rem]" />
-                            <span className="text-sm text-sky-500 mt-[0.1rem]">100% satisfaction gurantee</span>
-                            <div className='text-gray-500 ml-1 mr'>&#10095;</div>
-                        </div>
+                       
+                        <GuranteeModal />
 
                     </div>
 

@@ -44,6 +44,8 @@ const ItemPreview = ({ list }) => {
                             disabledClassName={'paginationDisabled'}
                             activeClassName={'paginationActive'}
                             pageClassName={'page'}
+                            previousClassName = {'prevoious'}
+                            nextClassName = {'prevoious'}
 
                         />
                     </div>

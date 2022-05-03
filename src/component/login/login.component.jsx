@@ -39,7 +39,7 @@ const LogIn = ({checklog}) => {
             {modal &&
                 (<div className="w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20">
                     <div className="bg-[rgba(49,49,49,0.5)] w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20" onClick={toggleModal}></div>
-                    <div className="flex-col h-[40rem] w-[30rem] bg-white z-20 absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2">
+                    <div className="flex-col h-[40rem] w-[30rem] bg-white z-20 absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-2xl">
                         <GrFormClose size={30} className='ml-2 mt-3 cursor-pointer' onClick={toggleModal}/>
                         <p className="font-bold text-3xl ml-4 mt-4">LogIn</p>
                         <form className="mt-10">

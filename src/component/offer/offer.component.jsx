@@ -10,7 +10,7 @@ import './carousel2.styles.css';
 const Offer = () => {
 
     const breakPoints = [
-        { width: 150, itemsToShow: 1 }
+        { width: 1, itemsToShow: 1 }
     ];
 
     return (
