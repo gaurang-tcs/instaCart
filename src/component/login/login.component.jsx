@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import FormInput from "../Form-Input/form-input.component";
 //import Loader from "../loader/loader.component";
-
+import { withRouter } from 'react-router-dom';
 import { GrFormClose } from 'react-icons/gr';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 
-const LogIn = ({checklog}) => {
+const LogIn = ({ checklog, history }) => {
     //const [isLoading, setIsLoading] = useState(true);
     const [modal, setModal] = useState(false);
 
@@ -34,15 +34,30 @@ const LogIn = ({checklog}) => {
         document.body.classList.remove('active-modal')
     }
 
+   async function handleSubmit(event) {
+        event.preventDefault();
+        let result = await fetch("https://insta-cart-api.herokuapp.com/auth/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userCredentials)
+        })
+
+        result = await result.json();
+        localStorage.setItem("user-info",JSON.stringify(result))
+        history.push('/storefront')
+    };
+
     return (
         <div>
             {modal &&
                 (<div className="w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20">
                     <div className="bg-[rgba(49,49,49,0.5)] w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20" onClick={toggleModal}></div>
                     <div className="flex-col h-[40rem] w-[30rem] bg-white z-20 absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-2xl">
-                        <GrFormClose size={30} className='ml-2 mt-3 cursor-pointer' onClick={toggleModal}/>
+                        <GrFormClose size={30} className='ml-2 mt-3 cursor-pointer' onClick={toggleModal} />
                         <p className="font-bold text-3xl ml-4 mt-4">LogIn</p>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={handleSubmit}>
                             <FormInput
                                 name="email"
                                 type="email"
@@ -66,22 +81,22 @@ const LogIn = ({checklog}) => {
                                 <p className="text-sm text-green-600 ml-2 font-medium">Reset it</p>
                             </div>
 
-                            <button className="text-white bg-green-600 rounded-xl p-4 w-[96%] ml-2 font-bold mt-8">
+                            <button className="text-white bg-green-600 rounded-xl p-4 w-[96%] ml-2 font-bold mt-8" type="submit">
                                 LogIn
                             </button>
 
                             <p className="text-center text-gray-500 mt-6">or</p>
 
                             <div className="flex-col ml-6">
-                                <div className="flex items-center mt-6 w-full cursor-pointer">
+                                <div className="flex items-center mt-4 w-[95%] cursor-pointer bg-[#f5f6f7] h-12 rounded-3xl">
                                     <BsFillTelephoneFill size={25} className='ml-16' />
                                     <p className="text-lg text-slate-700 font-semibold ml-12">Continue With Phone</p>
                                 </div>
-                                <div className="flex items-center mt-6 w-full cursor-pointer">
+                                <div className="flex items-center mt-4  w-[95%] cursor-pointer bg-[#f5f6f7] h-12 rounded-3xl">
                                     <img src='https://i.postimg.cc/wjq4NbXY/fb.png' alt='icon' className="ml-12 h-8 w-12" />
                                     <p className="text-lg text-slate-700 font-semibold ml-8">Continue With Facebook</p>
                                 </div>
-                                <div className="flex items-center mt-6 w-full cursor-pointer">
+                                <div className="flex items-center mt-4  w-[95%] cursor-pointer bg-[#f5f6f7] h-12 rounded-3xl">
                                     <img src="https://i.postimg.cc/tg01f82L/googlr.png" alt='icon' className="ml-[3.5rem] h-8 w-8" />
                                     <p className="text-lg text-slate-700 font-semibold ml-12">Continue With Google</p>
                                 </div>
@@ -92,14 +107,13 @@ const LogIn = ({checklog}) => {
                 </div>)}
 
             <div>
-                <button className={checklog ? 'w-[20rem] h-14 text-slate-800 font-medium text-xl rounded-lg bg-[#f7f7f7] ml-8' :'bg-green-600 w-24 h-12 rounded-3xl text-white mt-3 mr-4 font-semibold'} onClick={toggleModal}>
+                <button className={checklog ? 'w-[20rem] h-14 text-slate-800 font-medium text-xl rounded-lg bg-[#f7f7f7] ml-8' : 'bg-green-600 w-24 h-12 rounded-3xl text-white mt-3 mr-4 font-semibold'} onClick={toggleModal}>
                     Log in
                 </button>
             </div>
-
 
         </div>
     )
 };
 
-export default LogIn;
+export default withRouter(LogIn);

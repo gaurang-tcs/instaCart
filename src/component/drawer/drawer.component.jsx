@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
@@ -19,7 +21,6 @@ import SignUp from '../sign-up/signup.component.jsx';
 
 
 const SideBar = () => {
-
 
     const [state, setState] = React.useState({
         left: false,
@@ -54,10 +55,10 @@ const SideBar = () => {
             <Divider />
 
             <div className='flex flex-col'>
-                <div className='flex cursor-pointer'>
+                <Link className='flex cursor-pointer' to='/'>
                     <IoMdHome className='h-6 w-6 mt-8 ml-8' />
                     <span className='mt-[2rem] ml-4'>Stores</span>
-                </div>
+                </Link>
 
                 <div className='flex cursor-pointer'>
                     <FaReceipt className='h-6 w-6 mt-8 ml-8' />

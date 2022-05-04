@@ -21,8 +21,8 @@ const Location = () => {
 
     return (<div>
         {modal &&
-            (<div className="w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20">
-            <div className="bg-[rgba(49,49,49,0.5)] w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-20" onClick={toggleModal}></div>
+            (<div className="w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-40">
+            <div className="bg-[rgba(49,49,49,0.5)] w-[100vw] h-[100vh] top-0 right-0 bottom-0 left-0 fixed z-30" onClick={toggleModal}></div>
                 <div className="flex-col h-[45rem] w-[35rem] bg-white z-40 absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-2xl">
                     <div className="flex mt-4">
                         <AiOutlineClose className="h-6 w-6 ml-2 mt-2 cursor-pointer" onClick={toggleModal} />

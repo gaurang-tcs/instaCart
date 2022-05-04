@@ -24,11 +24,11 @@ const SideMenu = () => {
 
     return (<div>
         {!isLoading ?
-            (<div className="flex-col w-60 h-[100%] mt-20 fixed overflow-y-auto side-menu bg-white">
-    
+            (<div className="flex-col w-60 h-[100%] mt-20 z-10 fixed overflow-y-auto side-menu bg-white">
+
 
                 <div className="flex bg-white">
-                    <div className="flex-col items-center mt-4 cursor-pointer border-b-gray-400 pb-4 fixed ml-6 z-10 bg-white">
+                    <div className="flex-col items-center mt-4 cursor-pointer border-b-gray-400 pb-4 fixed ml-6 z-40 bg-white">
                         <img src='https://www.instacart.com/image-server/88x88/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png' alt='icon'
                             className="h-[5.5rem] w-[5.5rem] ml-10" />
 
@@ -38,12 +38,12 @@ const SideMenu = () => {
                             <span className="text-xs text-gray-500 my-1 ml-4 mt-[0.4rem]">Everyday store prices</span>
                             <div className='text-gray-500 py-[0.2rem] px-[0.3rem]'>&#10095;</div>
                         </div>
-                       
+
                         <GuranteeModal />
 
                     </div>
 
-                    <div className='flex-col p-4 ml-2 border-b-gray-400 mt-44 z-10 bg-white w-44 cursor-pointer fixed pt-8 '>
+                    <div className='flex-col p-4 ml-2 border-b-gray-400 mt-44 z-10 bg-white w-56 cursor-pointer fixed pt-8 '>
                         <div className='flex py-2 px-[0.1rem]'>
                             <AiFillShop className='h-6 w-6' />
                             <span className="ml-4 text-slate-800 font-semibold" onClick={AllItem}>Shop</span>

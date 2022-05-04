@@ -38,7 +38,7 @@ body.active-modal {
         border-radius: 3px;
         width: 80rem;
         height: 50rem;
-        z-index: 50;
+        z-index: 20;
         display: flex;
         flex-direction: column;
 
@@ -74,11 +74,11 @@ body.active-modal {
                     color: rgb(52, 53, 56);
                 }
 
-                .drop-button{
+                .drop-button {
                     display: flex;
                     margin-top: 2rem;
 
-                    .quantity-box{
+                    .quantity-box {
                         padding: 1rem;
                         padding-left: 1.5rem;
                         border-radius: 20px;
@@ -89,7 +89,7 @@ body.active-modal {
                         width: 4rem;
                     }
 
-                    .button{
+                    .button {
                         background-color: rgb(36, 162, 36);
                         padding: 1rem;
                         border-radius: 20px;
@@ -103,20 +103,21 @@ body.active-modal {
 
 
 
-                    .hidden{
+                    .hidden {
                         visibility: hidden;
                     }
                 }
 
-                .satisfaction{
+                .satisfaction {
                     display: flex;
                     margin-top: 4rem;
 
-                    img{
+                    img {
                         height: 3rem;
                         width: 3rem;
                     }
-                    .satisfaction-detail{
+
+                    .satisfaction-detail {
                         display: flex;
                         flex-direction: column;
                         margin-left: 0.5rem;
@@ -126,16 +127,17 @@ body.active-modal {
             }
 
         }
-        .details{
+
+        .details {
             margin-top: 5rem;
             margin-left: 1rem;
 
-            .d-head{
+            .d-head {
                 color: rgb(52, 53, 56);
                 font-size: 1.3rem;
             }
 
-            .d-detail{
+            .d-detail {
                 margin-top: 0.5rem;
                 color: rgb(164, 158, 158);
             }
@@ -160,9 +162,11 @@ body.active-modal {
     position: relative;
     cursor: pointer;
 
+
     img {
         width: 10rem;
         height: 10rem;
+        z-index: -2;
     }
 
     .add-button {
@@ -191,13 +195,11 @@ body.active-modal {
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
-        z-index: 1;
         background-color: white;
-
+        z-index: 1;
     }
 
     .main-button {
-
         width: 6rem;
         height: 2.5rem;
         border-radius: 20px;
@@ -237,8 +239,6 @@ body.active-modal {
     .item-details {
         display: flex;
         flex-direction: column;
-        //position: absolute;
-        //margin-top: 10rem;
         width: 10rem;
 
 
