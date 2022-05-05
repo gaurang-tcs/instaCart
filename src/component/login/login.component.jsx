@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import FormInput from "../Form-Input/form-input.component";
-//import Loader from "../loader/loader.component";
 import { withRouter } from 'react-router-dom';
 import { GrFormClose } from 'react-icons/gr';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 
+import { UserContext } from "../../providers/user/user.provider";
+
+
 const LogIn = ({ checklog, history }) => {
-    //const [isLoading, setIsLoading] = useState(true);
+    const{ LogInUser } = useContext(UserContext);
+
     const [modal, setModal] = useState(false);
 
     const [userCredentials, setCredentials] = useState({ email: '', password: '' })
@@ -17,16 +20,9 @@ const LogIn = ({ checklog, history }) => {
         setCredentials({ ...userCredentials, [name]: value })
     };
 
-
     const toggleModal = () => {
         setModal(!modal);
     };
-
-    //  useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsLoading(false);
-    //     }, 2000)
-    // }, [])
 
     if (modal) {
         document.body.classList.add('active-modal')
@@ -34,19 +30,11 @@ const LogIn = ({ checklog, history }) => {
         document.body.classList.remove('active-modal')
     }
 
-   async function handleSubmit(event) {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        let result = await fetch("https://insta-cart-api.herokuapp.com/auth/login", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userCredentials)
-        })
+        LogInUser(userCredentials);
+        history.push('/storefront');
 
-        result = await result.json();
-        localStorage.setItem("user-info",JSON.stringify(result))
-        history.push('/storefront')
     };
 
     return (

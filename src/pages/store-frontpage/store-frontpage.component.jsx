@@ -9,7 +9,7 @@ import SideBar from '../../component/drawer/drawer.component';
 const StoreFrontPage = () => {
 
     const [isLoading, setIsLoading] = useState(true);
-   
+
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
@@ -18,16 +18,17 @@ const StoreFrontPage = () => {
 
     return (
         <div>
-            {!isLoading && (<div className="flex-col">
-                <div className="flex">
-                    <SideBar />
-                    <StoreFrontHeader />
-                </div>
-                <div className="flex">
-                    <SideMenu />
-                    <ItemOverview />
-                </div>
-            </div>)}
+            {!isLoading && (
+                <div className="flex-col">
+                    <div className="flex">
+                        <SideBar />
+                        <StoreFrontHeader />
+                    </div>
+                    <div className="flex">
+                        <SideMenu />
+                        <ItemOverview />
+                    </div>
+                </div>)}
             {isLoading && <div><Loader /></div>}
         </div>
     )

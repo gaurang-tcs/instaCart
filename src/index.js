@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import CartProvider from './providers/cart/cart.provider';
 import ItemProvider from './providers/Item/items.provider';
+import UserProvider from './providers/user/user.provider';
 
 import './index.css';
 import App from './App';
@@ -28,19 +29,21 @@ const theme = createTheme({
 });
 
 ReactDOM.render(
-  <ItemProvider>
-    <CartProvider>
-      <React.StrictMode>
-        <StyledEngineProvider injectFirst>
-          <ThemeProvider theme={theme}>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
-              <App />
-            </BrowserRouter>
-          </ThemeProvider>
-        </StyledEngineProvider>
-      </React.StrictMode>
-    </CartProvider>
-  </ItemProvider>,
+  <UserProvider>
+    <ItemProvider>
+      <CartProvider>
+        <React.StrictMode>
+          <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+              <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <App />
+              </BrowserRouter>
+            </ThemeProvider>
+          </StyledEngineProvider>
+        </React.StrictMode>
+      </CartProvider>
+    </ItemProvider>
+  </UserProvider>,
   document.getElementById('root')
 );
 

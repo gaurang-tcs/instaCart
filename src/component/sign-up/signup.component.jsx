@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { GrFormClose } from 'react-icons/gr';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 
 import FormInput from "../Form-Input/form-input.component";
 
+import { UserContext } from "../../providers/user/user.provider";
+
 const SignUp = ({ checksign }) => {
+
+    const { SignUpUser } = useContext(UserContext)
 
     const [modal, setModal] = useState(false);
 
@@ -19,7 +23,6 @@ const SignUp = ({ checksign }) => {
         document.body.classList.remove('active-modal')
     }
 
-
     const [userCredentials, setCredentials] = useState({
         email: '',
         password: '',
@@ -31,19 +34,13 @@ const SignUp = ({ checksign }) => {
         setCredentials({ ...userCredentials, [name]: value });
     }
 
+
     const handleSubmit =  event => {
-        console.log(JSON.stringify(userCredentials))
+
         event.preventDefault();
-         fetch("https://insta-cart-api.herokuapp.com/auth/register", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userCredentials)
-        })
-        .then(data => {return data.json()})
-        .then(res=> console.log(res))
-        .catch(err=>console.log(err));
+        SignUpUser(userCredentials);
+        
+        setModal(!modal)
     };
     
 
