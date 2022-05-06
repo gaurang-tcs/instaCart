@@ -14,6 +14,7 @@ const HomePage = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        //console.log(localStorage.getItem('user-info'))
         setTimeout(() => {
             setIsLoading(false);
         }, 2000)

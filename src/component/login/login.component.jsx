@@ -8,7 +8,7 @@ import { UserContext } from "../../providers/user/user.provider";
 
 
 const LogIn = ({ checklog, history }) => {
-    const{ LogInUser } = useContext(UserContext);
+    const { LogInUser } = useContext(UserContext);
 
     const [modal, setModal] = useState(false);
 
@@ -19,6 +19,9 @@ const LogIn = ({ checklog, history }) => {
         const { value, name } = event.target;
         setCredentials({ ...userCredentials, [name]: value })
     };
+
+     const userlogin = localStorage.getItem('isLogIn')
+     const IsLogIn = JSON.parse(userlogin)
 
     const toggleModal = () => {
         setModal(!modal);
@@ -33,6 +36,7 @@ const LogIn = ({ checklog, history }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         LogInUser(userCredentials);
+        setModal(!modal);
         history.push('/storefront');
 
     };
@@ -94,11 +98,15 @@ const LogIn = ({ checklog, history }) => {
                     </div>
                 </div>)}
 
-            <div>
-                <button className={checklog ? 'w-[20rem] h-14 text-slate-800 font-medium text-xl rounded-lg bg-[#f7f7f7] ml-8' : 'bg-green-600 w-24 h-12 rounded-3xl text-white mt-3 mr-4 font-semibold'} onClick={toggleModal}>
-                    Log in
-                </button>
-            </div>
+            { !IsLogIn &&
+                (
+                    <div>
+                        <button className={checklog ? 'w-[20rem] h-14 text-slate-800 font-medium text-xl rounded-lg bg-[#f7f7f7] ml-8' : 'bg-green-600 w-24 h-12 rounded-3xl text-white mt-3 mr-4 font-semibold'} onClick={toggleModal}>
+                            Log in
+                        </button>
+                    </div>
+                )}
+
 
         </div>
     )

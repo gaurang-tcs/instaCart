@@ -1,32 +1,43 @@
-import React, { createContext, useState } from 'react';
-import { setLogInUser, setSignUpUser } from './user.utils';
+import React, { createContext, useEffect, useState } from 'react';
+import { setLogInUser, setSignUpUser, setLogOut } from './user.utils';
 
-export const UserContext = createContext ({
-    user: [],
-    LogInUser: () => {},
-    SignUpUser: () => {}
-  
+export const UserContext = createContext({
+    user: {},
+    LogInUser: () => { },
+    SignUpUser: () => { },
+    LogOut: () => { }
 });
 
-const UserProvider = ({children}) => {
-    
-    const [user,setUser] = useState([]);
-    
-    const LogInUser = userCredentials => setUser(setLogInUser(userCredentials));
-    const SignUpUser = userCredentials => setUser(setSignUpUser(userCredentials))
+const UserProvider = ({ children }) => {
+
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        setUser(localStorage.getItem('user-info'))
+    }, [])
+
+    useEffect(() => {
+        console.log(user);
+    }, [user])
+
+    const LogInUser = userCredentials => setUser(setLogInUser(userCredentials))
+
+    const SignUpUser = userCredentials => setSignUpUser(userCredentials);
+
+    const LogOut = () => setUser(setLogOut());
 
     return (
         <UserContext.Provider
-        value={{ 
-           user,
-           LogInUser,
-           SignUpUser
-        }}
+            value={{
+                user,
+                LogInUser,
+                SignUpUser,
+                LogOut
+            }}
         >
-         {children}
+            {children}
         </UserContext.Provider>
     );
-
 };
 
 export default UserProvider;

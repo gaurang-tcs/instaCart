@@ -35,10 +35,10 @@ const Checkout = () => {
             <div className="w-[50rem] ml-[25rem] mt-8 bg-white">
                 <div className="mt-10">
                     <div className="checkout-tabs flex w-[50rem] h-[5.5rem] justify-between  border-b-[1px] border-gray-300">
-                        <div className={index === 1 ? "px-4 pt-6 w-[25rem] h-full text-xl text-center border-b-2 border-green-500 text-green-500" : "px-4 pt-6 w-[25rem] text-xl text-slate-500 text-center"} onClick={() => { setIndex(1) }} >
+                        <div className={index === 1 ? "px-4 pt-6 w-[25rem] h-full text-xl text-center border-b-2 border-green-500 text-green-500 cursor-pointer" : "px-4 pt-6 w-[25rem] text-xl text-slate-500 text-center cursor-pointer"} onClick={() => { setIndex(1) }} >
                             Delivery
                         </div>
-                        <div className={index === 2 ? "px-4 pt-6 w-[25rem] h-full text-xl text-green-500 text-center border-b-2 border-green-500" : "px-4 pt-6 w-[25rem] text-xl text-slate-500 text-center"} onClick={() => { setIndex(2) }} >
+                        <div className={index === 2 ? "px-4 pt-6 w-[25rem] h-full text-xl text-green-500 text-center border-b-2 border-green-500 cursor-pointer" : "px-4 pt-6 w-[25rem] text-xl text-slate-500 text-center cursor-pointer"} onClick={() => { setIndex(2) }} >
                             Pickup
                         </div>
                     </div>
@@ -136,7 +136,6 @@ const Checkout = () => {
                     </div>
                 </div>
 
-
                 <div className="ghhhg" hidden={index !== 2}>
                     <div className="mt-8 flex-col">
                         <div className="flex pl-8 pb-8 border-b-[1px] border-gray-300">
@@ -191,7 +190,6 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
-
 
             {index === 2 &&
                 (<div className="ml-8 mt-8 bg-white w-[20rem] h-[45rem] flex-col">
@@ -286,9 +284,7 @@ const Checkout = () => {
                             Prices may vary from those in store.</p>
                     </div>
                 </div>)}
-
         </div>
-
     )
 };
 

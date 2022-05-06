@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
@@ -17,10 +18,12 @@ import { MdOutlineLogout } from 'react-icons/md';
 
 import SignUp from '../sign-up/signup.component.jsx';
 
-
+import { UserContext } from '../../providers/user/user.provider.jsx';
 
 
 const SideBar = () => {
+
+    const { LogOut } = useContext(UserContext)
 
     const [state, setState] = React.useState({
         left: false,
@@ -32,6 +35,9 @@ const SideBar = () => {
         }
         setState({ ...state, [anchor]: open });
     };
+
+    const userlogin = localStorage.getItem('isLogIn')
+    const IsLogIn = JSON.parse(userlogin)
 
     const list = (anchor) => (
         <Box
@@ -115,10 +121,13 @@ const SideBar = () => {
                     <span className='mt-[2rem] ml-4'>How Instacart works</span>
                 </div>
 
-                <div className='flex cursor-pointer'>
-                    <MdOutlineLogout className='h-6 w-6 mt-8 ml-8' />
-                    <span className='mt-[2rem] ml-4'>Log out</span>
-                </div>
+                {
+                    IsLogIn && (
+                        <div className='flex cursor-pointer' onClick={() => LogOut()}>
+                            <MdOutlineLogout className='h-6 w-6 mt-8 ml-8' />
+                            <span className='mt-[2rem] ml-4'>Log out</span>
+                        </div>
+                    )}
 
             </div>
 

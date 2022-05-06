@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Location from '../location/location.component';
 import CartDrawer from '../cartdrawer/cartdrawer.component';
 import LogIn from '../login/login.component';
+import LogOut from '../logout/logout.component';
 
 import './styles.css';
 
@@ -43,6 +44,8 @@ const Header = () => {
             <div>
                 <LogIn />
             </div>
+            
+            <LogOut />
 
             <CartDrawer />
 
